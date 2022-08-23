@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(./assets/home.png) center no-repeat;
+  height: 100vh;
+  background-size: cover;
+  padding: 15px;
+}
+
+.ancient-img {
+  cursor: pointer;
+}
+.ancients {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 560px;
+}
+.ancient_div {
+  display: flex;
+  margin: 10px;
+  transition: all ease 1s;
+  width: 260px;
+  height: 344px;
+}
+
+.ancient_div:hover {
+  scale: 1.05;
+}
+.ancient_div:last-child {
+  margin-right: 0;
+}
+
+.active {
+  border: 2px solid red;
+}
