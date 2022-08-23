@@ -11,6 +11,7 @@ console.log(brownCardsData)
 console.log(greenCardsData)
 
 const ancients = document.querySelector('.ancients')
+const cards = document.querySelector('.cards')
 
 for (let i = 0; i < ancientsData.length; i++) {
   let divTag = `<div class="ancient_div">
@@ -29,3 +30,6 @@ ancientImgList.forEach((el) =>
     el.classList.toggle('active')
   })
 )
+
+let blue1 = `<img class="blue1" src="${blueCardsData[0].cardFace}" alt="${blueCardsData[0].id}"/>`
+cards.insertAdjacentHTML('beforeend', blue1)
