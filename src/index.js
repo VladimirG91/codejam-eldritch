@@ -31,8 +31,8 @@ ancientImgList.forEach((el) =>
   })
 )
 
-let blue1 = `<img class="blue1" src="${greenCardsData[0].cardFace}" alt="${greenCardsData[0].id}"/>`
-cards.insertAdjacentHTML('beforeend', blue1)
+// let blue1 = `<img class="blue1" src="${greenCardsData[0].cardFace}" alt="${greenCardsData[0].id}"/>`
+// cards.insertAdjacentHTML('beforeend', blue1)
 // получаем все карты
 const allCards = [...blueCardsData, ...brownCardsData, ...greenCardsData]
 console.log('allCards >', allCards)

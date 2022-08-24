@@ -11,7 +11,43 @@
     <header class="header"></header>
     <main class="main">
       <div class="ancients"></div>
-      <div class="cards"></div>
+      <div class="difficulty-container">
+        <div class="difficulty">Easiest</div>
+        <div class="difficulty">Easy</div>
+        <div class="difficulty active">Normal</div>
+        <div class="difficulty">High</div>
+        <div class="difficulty">Highest</div>
+      </div>
+      <div class="counter-container">
+        <div class="current-state">
+          <div class="stage-container">
+            <span class="stage-text">First stage</span>
+            <div class="dots-container">
+              <div class="dot green">1</div>
+              <div class="dot brown">2</div>
+              <div class="dot blue">1</div>
+            </div>
+          </div>
+          <div class="stage-container">
+            <span class="stage-text">Second stage</span>
+            <div class="dots-container">
+              <div class="dot green">3</div>
+              <div class="dot brown">2</div>
+              <div class="dot blue">1</div>
+            </div>
+          </div>
+          <div class="stage-container">
+            <span class="stage-text">Third stage</span>
+            <div class="dots-container">
+              <div class="dot green">2</div>
+              <div class="dot brown">4</div>
+              <div class="dot blue">0</div>
+            </div>
+          </div>
+        </div>
+        <div class="deck"></div>
+        <div class="last-card"></div>
+      </div>
     </main>
     <footer class="footer"></footer>
     <script type="module" src="../dist/main.js"></script>
