@@ -29,6 +29,12 @@ const difficultyContainer = document.querySelector('.difficulty-container')
 const shuffleBtn = document.querySelector('.shuffle-btn')
 const counter = document.querySelector('.counter-container ')
 let allDots = document.querySelectorAll('.dot')
+
+let azathothCount = [1, 2, 1, 3, 2, 1, 2, 4, 0]
+let cthulhuCount = [0, 2, 2, 1, 3, 0, 3, 4, 0]
+let iogSothothCount = [0, 2, 1, 2, 3, 1, 3, 4, 0]
+let shubNiggurathCount = [1, 2, 1, 3, 2, 1, 2, 4, 0]
+
 // добавляем класс active древнему по клику
 for (var i = 0; i < ancientImgList.length; i++) {
   ancientImgList[i].onclick = function () {
@@ -43,11 +49,26 @@ for (var i = 0; i < ancientImgList.length; i++) {
     } else {
       this.active += ' ' + active
     }
-    // if (ancientImgList[0].classList.contains('active')) {
-    //   for (let k = 0; k < allDots.length; k++) {
-    //     allDots[k].textContent = ancientImgList[0].firstStage[0]
-    //   }
-    // }
+    if (ancientImgList[0].classList.contains('active')) {
+      for (let k = 0; k < allDots.length; k++) {
+        allDots[k].textContent = azathothCount[k]
+      }
+    }
+    if (ancientImgList[1].classList.contains('active')) {
+      for (let k = 0; k < allDots.length; k++) {
+        allDots[k].textContent = cthulhuCount[k]
+      }
+    }
+    if (ancientImgList[2].classList.contains('active')) {
+      for (let k = 0; k < allDots.length; k++) {
+        allDots[k].textContent = iogSothothCount[k]
+      }
+    }
+    if (ancientImgList[3].classList.contains('active')) {
+      for (let k = 0; k < allDots.length; k++) {
+        allDots[k].textContent = shubNiggurathCount[k]
+      }
+    }
   }
 }
 
