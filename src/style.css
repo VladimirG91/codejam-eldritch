@@ -59,7 +59,7 @@ main {
   flex-direction: column;
   flex-wrap: wrap;
   gap: 10px;
-  min-width: 37%;
+
   max-height: 70%;
   padding: 20px;
 }
