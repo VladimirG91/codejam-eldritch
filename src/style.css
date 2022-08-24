@@ -83,9 +83,30 @@ main {
 
 .active {
   border: 2px solid red;
-  color: darkviolet;
 }
 
+.dif-act {
+  border: 2px solid red;
+  color: darkviolet;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+.shuffle-btn {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.shuffle {
+  cursor: pointer;
+  border-color: black;
+  background: transparent;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+.shuffle:hover {
+  color: darkviolet;
+  transition: all ease 1s;
+}
 .difficulty-container {
   display: flex;
   flex-direction: column;
@@ -109,9 +130,17 @@ main {
   min-width: 30%;
 }
 
+.hide {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.55s opacity, 0.55s visibility;
+}
+
 .deck {
+  cursor: pointer;
   background-image: url('./assets/mythicCardBackground.png');
 }
+
 .deck,
 .last-card {
   background-size: cover;
