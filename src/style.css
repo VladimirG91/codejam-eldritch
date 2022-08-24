@@ -142,7 +142,7 @@ main {
 
 .deck {
   cursor: pointer;
-  background-image: url('./assets/mythicCardBackground.png');
+  background-image: url('./assets/mythicCardBackground.jpg');
 }
 
 .deck,
