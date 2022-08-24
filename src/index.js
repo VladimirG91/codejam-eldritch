@@ -1,14 +1,11 @@
 import difficulties from './data/difficulties'
 import ancientsData from './data/ancients'
-import blueCardsData from './data/mythicCards/blue/index'
-import brownCardsData from './data/mythicCards/brown/index'
-import greenCardsData from './data/mythicCards/green/index'
+import allBlueCards from './data/mythicCards/blue/index'
+import allBrownCards from './data/mythicCards/brown/index'
+import allGreenCards from './data/mythicCards/green/index'
 
 console.log('dificulties >', difficulties)
 console.log('ancientsData >', ancientsData)
-console.log('blueCardsData >', blueCardsData)
-console.log('brownCardsData >', brownCardsData)
-console.log('greenCardsData >', greenCardsData)
 
 const ancients = document.querySelector('.ancients')
 const cards = document.querySelector('.cards')
@@ -72,16 +69,6 @@ for (var i = 0; i < ancientImgList.length; i++) {
   }
 }
 
-// for(let k=0; k <ancientImgList.length; k++ ){
-
-// }
-// ancientImgList.forEach((el)=>{
-//   if(el.classList.contains('active')){
-
-//   }
-// })
-// console.log(allDots)
-
 const difficulty = document.querySelectorAll('.difficulty')
 // выбираем сложность, добавлчем класс act
 for (var i = 0; i < difficulty.length; i++) {
@@ -97,10 +84,8 @@ for (var i = 0; i < difficulty.length; i++) {
   }
 }
 
-// let blue1 = `<img class="blue1" src="${greenCardsData[0].cardFace}" alt="${greenCardsData[0].id}"/>`
-// cards.insertAdjacentHTML('beforeend', blue1)
 // получаем все карты
-const allCards = [...blueCardsData, ...brownCardsData, ...greenCardsData]
+const allCards = [...allBlueCards, ...allBrownCards, ...allGreenCards]
 console.log('allCards >', allCards)
 // получаем массивы из легких, обычных, сложных карт
 let allEasyCards = []
@@ -184,3 +169,28 @@ console.log('allHardGreenCards >', allHardGreenCards)
 console.log('allHardBlueCards >', allHardBlueCards)
 console.log('allHardBrownCards >', allHardBrownCards)
 //
+
+// let allGreenCards = []
+// let allBlueCards = []
+// let allBrownCards = []
+
+// allCards.forEach((el) => {
+//   if (el.color == 'green') {
+//     allGreenCards.push(el)
+//   }
+//   if (el.color == 'blue') {
+//     allBlueCards.push(el)
+//   }
+//   if (el.color == 'brown') {
+//     allBrownCards.push(el)
+//   }
+// })
+console.log('allGreenCards >', allGreenCards)
+console.log('allBlueCards >', allBlueCards)
+console.log('allBrownCards >', allBrownCards)
+function numRandomized() {
+  return 0.5 - Math.random()
+}
+function shuffleCards(arr) {
+  return [...arr].sort(numRandomized)
+}
