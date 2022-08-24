@@ -85,11 +85,10 @@ main {
   border: 2px solid red;
 }
 
-.dif-act {
+.act {
   border: 2px solid red;
   color: darkviolet;
   border-radius: 5px;
-  padding: 0 5px;
 }
 .shuffle-btn {
   display: flex;
@@ -113,12 +112,17 @@ main {
   gap: 20px;
   height: 100vh;
   justify-content: center;
+  width: 70px;
 }
 .difficulty:hover {
   cursor: pointer;
   transition: all ease 1s;
   color: darkviolet;
   text-shadow: 1px black;
+}
+.difficulty {
+  height: 40px;
+  padding: 0 5px;
 }
 
 .counter-container {
@@ -162,9 +166,32 @@ main {
   gap: 5px;
 }
 
-.dots-container {
+.dots-container-1,
+.dots-container-2,
+.dots-container-3 {
   align-items: center;
   display: flex;
   gap: 20px;
   justify-content: center;
+}
+
+.dot {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  margin: auto;
+  padding-bottom: 30px;
+}
+
+.green {
+  background: green;
+}
+
+.brown {
+  background: brown;
+}
+
+.blue {
+  background: blue;
 }
