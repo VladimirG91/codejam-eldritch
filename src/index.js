@@ -95,9 +95,6 @@ shuffleBtn.addEventListener('click', () => {
     for (let i = 0; i < 4; i++) {
       azathothThirdStage.push(shuffledEasiestLvlBrownCards.pop())
     }
-    console.log('azathothEasiestFirstStage', azathothFirstStage)
-    console.log('azathothEasiestSecondStage', azathothSecondStage)
-    console.log('azathothEasiestThirdStage', azathothThirdStage)
   }
   // ктулху
   if (
@@ -118,9 +115,6 @@ shuffleBtn.addEventListener('click', () => {
     for (let i = 0; i < 4; i++) {
       cthulhuThirdStage.push(shuffledEasiestLvlBrownCards.pop())
     }
-    console.log('cthulhuEasiestFirstStage', cthulhuFirstStage)
-    console.log('cthulhuEasiestSecondStage', cthulhuSecondStage)
-    console.log('cthulhuEasiestThirdStage', cthulhuThirdStage)
   }
   // йогсотот
   if (
@@ -142,9 +136,6 @@ shuffleBtn.addEventListener('click', () => {
     for (let i = 0; i < 4; i++) {
       iogSothothThirdStage.push(shuffledEasiestLvlBrownCards.pop())
     }
-    console.log('iogSothothEasiestFirstStage', iogSothothFirstStage)
-    console.log('iogSothothEasiestSecondStage', iogSothothSecondStage)
-    console.log('iogSothothEasiestThirdStage', iogSothothThirdStage)
   }
 
   //========================= Если выбран EASY LVL========================
@@ -176,9 +167,6 @@ shuffleBtn.addEventListener('click', () => {
     for (let i = 0; i < 4; i++) {
       azathothThirdStage.push(shuffledEasyLvlBrownCards.pop())
     }
-    console.log('azathothEasyFirstStage', azathothFirstStage)
-    console.log('azathothEasySecondStage', azathothSecondStage)
-    console.log('azathothEasyThirdStage', azathothThirdStage)
   }
   // ктулху
   if (
@@ -199,9 +187,6 @@ shuffleBtn.addEventListener('click', () => {
     for (let i = 0; i < 4; i++) {
       cthulhuThirdStage.push(shuffledEasyLvlBrownCards.pop())
     }
-    console.log('cthulhuEasyFirstStage', cthulhuFirstStage)
-    console.log('cthulhuEasySecondStage', cthulhuSecondStage)
-    console.log('cthulhuEasyThirdStage', cthulhuThirdStage)
   }
   // йогсотот
   if (
@@ -223,9 +208,6 @@ shuffleBtn.addEventListener('click', () => {
     for (let i = 0; i < 4; i++) {
       iogSothothThirdStage.push(shuffledEasyLvlBrownCards.pop())
     }
-    console.log('iogSothothEasyFirstStage', iogSothothFirstStage)
-    console.log('iogSothothEasySecondStage', iogSothothSecondStage)
-    console.log('iogSothothEasyThirdStage', iogSothothThirdStage)
   }
 
   //==================== Если выбран NORMAL LVL  ==================
@@ -254,9 +236,6 @@ shuffleBtn.addEventListener('click', () => {
     for (let i = 0; i < 4; i++) {
       azathothThirdStage.push(shuffledAllBrownArr.pop())
     }
-    console.log('azathothNormalFirstStage', azathothFirstStage)
-    console.log('azathothNormalSecondStage', azathothSecondStage)
-    console.log('azathothNormalThirdStage', azathothThirdStage)
   }
   // ктулху
   if (
@@ -277,9 +256,6 @@ shuffleBtn.addEventListener('click', () => {
     for (let i = 0; i < 4; i++) {
       cthulhuThirdStage.push(shuffledAllBrownArr.pop())
     }
-    console.log('cthulhuNormalFirstStage', cthulhuFirstStage)
-    console.log('cthulhuNormalSecondStage', cthulhuSecondStage)
-    console.log('cthulhuNormalThirdStage', cthulhuThirdStage)
   }
   // йогсотот
   if (
@@ -301,9 +277,6 @@ shuffleBtn.addEventListener('click', () => {
     for (let i = 0; i < 4; i++) {
       iogSothothThirdStage.push(shuffledAllBrownArr.pop())
     }
-    console.log('iogSothothNormalFirstStage', iogSothothFirstStage)
-    console.log('iogSothothNormalSecondStage', iogSothothSecondStage)
-    console.log('iogSothothNormalThirdStage', iogSothothThirdStage)
   }
   //========================= Если выбран HARD LVL========================
   let hardLvlGreenCards = [...allHardGreenCards, ...allNormalGreenCards]
@@ -334,9 +307,6 @@ shuffleBtn.addEventListener('click', () => {
     for (let i = 0; i < 4; i++) {
       azathothThirdStage.push(shuffledHardLvlBrownCards.pop())
     }
-    console.log('azathothHardFirstStage', azathothFirstStage)
-    console.log('azathothHardSecondStage', azathothSecondStage)
-    console.log('azathothHardThirdStage', azathothThirdStage)
   }
   // ктулху
   if (
@@ -357,9 +327,6 @@ shuffleBtn.addEventListener('click', () => {
     for (let i = 0; i < 4; i++) {
       cthulhuThirdStage.push(shuffledHardLvlBrownCards.pop())
     }
-    console.log('cthulhuHardFirstStage', cthulhuFirstStage)
-    console.log('cthulhuHardSecondStage', cthulhuSecondStage)
-    console.log('cthulhuHardThirdStage', cthulhuThirdStage)
   }
   // йогсотот
   if (
@@ -381,9 +348,6 @@ shuffleBtn.addEventListener('click', () => {
     for (let i = 0; i < 4; i++) {
       iogSothothThirdStage.push(shuffledHardLvlBrownCards.pop())
     }
-    console.log('iogSothothHardFirstStage', iogSothothFirstStage)
-    console.log('iogSothothHardSecondStage', iogSothothSecondStage)
-    console.log('iogSothothHardThirdStage', iogSothothThirdStage)
   }
   //========================= Если выбран HARDEST LVL========================
   let greenHardest = shuffleCards(allNormalGreenCards)
@@ -396,7 +360,6 @@ shuffleBtn.addEventListener('click', () => {
   for (let i = 0; i < 4; i++) {
     brownPopHardest.push(brownHardest.pop())
   }
-  console.log('brownPopHardest', brownPopHardest)
   let hardestLvlBrownCards = [...allHardBrownCards, ...brownPopHardest]
   let shuffledHardestLvlBrownCards = shuffleCards(hardestLvlBrownCards)
   //азатот и шуб-ниггурат
@@ -421,9 +384,6 @@ shuffleBtn.addEventListener('click', () => {
     for (let i = 0; i < 4; i++) {
       azathothThirdStage.push(shuffledHardestLvlBrownCards.pop())
     }
-    console.log('azathothHardestFirstStage', azathothFirstStage)
-    console.log('azathothHardestSecondStage', azathothSecondStage)
-    console.log('azathothHardestThirdStage', azathothThirdStage)
   }
   // ктулху
   if (
@@ -444,9 +404,6 @@ shuffleBtn.addEventListener('click', () => {
     for (let i = 0; i < 4; i++) {
       cthulhuThirdStage.push(shuffledHardestLvlBrownCards.pop())
     }
-    console.log('cthulhuHardestFirstStage', cthulhuFirstStage)
-    console.log('cthulhuHardestSecondStage', cthulhuSecondStage)
-    console.log('cthulhuHardestThirdStage', cthulhuThirdStage)
   }
   // йогсотот
   if (
@@ -468,9 +425,6 @@ shuffleBtn.addEventListener('click', () => {
     for (let i = 0; i < 4; i++) {
       iogSothothThirdStage.push(shuffledHardestLvlBrownCards.pop())
     }
-    console.log('iogSothothHardestFirstStage', iogSothothFirstStage)
-    console.log('iogSothothHardestSecondStage', iogSothothSecondStage)
-    console.log('iogSothothHardestThirdStage', iogSothothThirdStage)
   }
   arrAzathoth = [azathothThirdStage, azathothSecondStage, azathothFirstStage]
   arrСthulhu = [cthulhuThirdStage, cthulhuSecondStage, cthulhuFirstStage]
@@ -723,25 +677,3 @@ allHardCards.forEach((el) => {
     allHardBrownCards.push(el)
   }
 })
-
-// console.log('allCards >', allCards)
-// console.log('allEasyCards >', allEasyCards)
-// console.log('allNormalCards >', allNormalCards)
-// console.log('allHardCards >', allHardCards)
-// //
-// console.log('allEasyGreenCards >', allEasyGreenCards)
-// console.log('allEasyBlueCards >', allEasyBlueCards)
-// console.log('allEasyBrownCards >', allEasyBrownCards)
-// // //
-// console.log('allNormalGreenCards >', allNormalGreenCards)
-// console.log('allNormalBlueCards >', allNormalBlueCards)
-// console.log('allNormalBrownCards >', allNormalBrownCards)
-// //
-// console.log('allHardGreenCards >', allHardGreenCards)
-// console.log('allHardBlueCards >', allHardBlueCards)
-// console.log('allHardBrownCards >', allHardBrownCards)
-// //
-
-// console.log('allGreenCards >', allGreenCards)
-// console.log('allBlueCards >', allBlueCards)
-// console.log('allBrownCards >', allBrownCards)
