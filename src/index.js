@@ -44,6 +44,8 @@ let shubNiggurathCount = [1, 2, 1, 3, 2, 1, 2, 4, 0]
 let azathothFirstStage = []
 let azathothSecondStage = []
 let azathothThirdStage = []
+let arrAzathoth = []
+
 // ==========функция шафл ======================
 shuffleBtn.addEventListener('click', () => {
   // шафл грин
@@ -87,6 +89,7 @@ shuffleBtn.addEventListener('click', () => {
     console.log('azathothSecondStage', azathothSecondStage)
     console.log('azathothThirdStage', azathothThirdStage)
   }
+  arrAzathoth = [azathothThirdStage, azathothSecondStage, azathothFirstStage]
 })
 
 // функция подсчета карт в стэйжах
@@ -106,24 +109,51 @@ function countFunc(arr) {
       countBlue++
     }
   })
+  let countArr = [countGreen, countBrown, countBlue]
 
-  console.log(countGreen)
-  console.log(countBrown)
-  console.log(countBlue)
+  console.log('countArr', countArr)
+  return countArr
 }
+// функция заполнения счетчика
+function setFfields() {}
+
+const lastCard = document.querySelector('.last-card')
+// кнопка-карта
 
 deckBtn.addEventListener('click', () => {
   if (ancientImgList[0].classList.contains('active')) {
-    countFunc(azathothFirstStage)
-    // countFunc(azathothSecondStage),
-    // countFunc(azathothThirdStage)
-  }
-  if (azathothFirstStage.length > 0) {
-    azathothFirstStage.pop()
-    console.log('length', azathothFirstStage.length)
+    if (arrAzathoth[2].length != 0) {
+      let lastElement = arrAzathoth[2].pop()
+      lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
+      for (let i = 0; i < 3; i++) {
+        allDots[i].textContent = countFunc(azathothFirstStage)[i]
+      }
+      console.log('lastElement', lastElement)
+      console.log('arrAzathoth', arrAzathoth)
+    }
+    if (arrAzathoth[2].length == 0 && arrAzathoth[1].length != 0) {
+      let lastElement = arrAzathoth[1].pop()
+      lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
+      for (let i = 3; i < 6; i++) {
+        allDots[i].textContent = countFunc(azathothSecondStage)[i - 3]
+      }
+      console.log('lastElement', lastElement)
+      console.log('arrAzathoth', arrAzathoth)
+    }
+    if (arrAzathoth[1].length == 0 && arrAzathoth[0].length != 0) {
+      let lastElement = arrAzathoth[0].pop()
+      lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
+      for (let i = 6; i < 9; i++) {
+        allDots[i].textContent = countFunc(azathothThirdStage)[i - 6]
+      }
+
+      console.log('lastElement', lastElement)
+      console.log('arrAzathoth', arrAzathoth)
+    }
   }
 })
-// слудующий шаг запушить все в 1 массив и методом поп удалять при нажатии на дукбтн
+
+// слудующий шаг запушить все в 1 массив и методом поп удалять при нажатии на дукбт, выводя в ласткард
 // добавляем класс active древнему по клику
 for (var i = 0; i < ancientImgList.length; i++) {
   ancientImgList[i].onclick = function () {
