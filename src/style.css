@@ -59,7 +59,7 @@ main {
   flex-direction: column;
   flex-wrap: wrap;
   gap: 10px;
-
+  min-width: 35%;
   max-height: 70%;
   padding: 20px;
 }
@@ -135,6 +135,7 @@ main {
 }
 
 .hide {
+  transition: all ease 0.5s;
   opacity: 0;
   visibility: hidden;
   transition: 0.55s opacity, 0.55s visibility;
@@ -147,9 +148,10 @@ main {
 
 .deck,
 .last-card {
+  transition: all ease 1s;
   background-size: cover;
-  height: 190px;
-  width: 130px;
+  height: 260px;
+  width: 200px;
 }
 
 .current-state {
