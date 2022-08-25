@@ -76,6 +76,7 @@ main {
 
 .ancient_div:hover {
   scale: 1.05;
+  transition: all ease 0.5s;
   box-shadow: 0px 3px 17px 5px gold;
 }
 /* .ancient_div:last-child {

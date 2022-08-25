@@ -775,9 +775,6 @@ allHardCards.forEach((el) => {
 const difficulty = document.querySelectorAll('.difficulty')
 // выбираем сложность, добавлчем класс act
 for (var i = 0; i < difficulty.length; i++) {
-  arrAzathoth = []
-  arrСthulhu = []
-  arrIogSothoth = []
   difficulty[i].onclick = function () {
     if (this.classList) {
       for (var j = 0; j < difficulty.length; j++) {
