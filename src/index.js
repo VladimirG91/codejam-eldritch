@@ -60,6 +60,27 @@ let arrIogSothoth = []
 // ==========функция шафл ======================
 shuffleBtn.addEventListener('click', () => {
   deckBtn.classList.remove('hide')
+  // устанавливаем значения счетчика по умолчанию
+  if (ancientImgList[0].classList.contains('active')) {
+    for (let k = 0; k < allDots.length; k++) {
+      allDots[k].textContent = azathothCount[k]
+    }
+  }
+  if (ancientImgList[1].classList.contains('active')) {
+    for (let k = 0; k < allDots.length; k++) {
+      allDots[k].textContent = cthulhuCount[k]
+    }
+  }
+  if (ancientImgList[2].classList.contains('active')) {
+    for (let k = 0; k < allDots.length; k++) {
+      allDots[k].textContent = iogSothothCount[k]
+    }
+  }
+  if (ancientImgList[3].classList.contains('active')) {
+    for (let k = 0; k < allDots.length; k++) {
+      allDots[k].textContent = shubNiggurathCount[k]
+    }
+  }
   //========================= Если выбран EASIEST LVL========================
   let green = shuffleCards(allNormalGreenCards)
   let greenPop = green.pop()
@@ -79,6 +100,9 @@ shuffleBtn.addEventListener('click', () => {
       ancientImgList[3].classList.contains('active')) &&
     difficulty[0].classList.contains('act')
   ) {
+    azathothFirstStage = []
+    azathothSecondStage = []
+    azathothThirdStage = []
     for (let i = 0; i < 1; i++) {
       azathothFirstStage.push(shuffledEasiestLvlGreenCards.pop())
       azathothFirstStage.push(shuffledEasiestLvlBlueCards.pop())
@@ -101,6 +125,9 @@ shuffleBtn.addEventListener('click', () => {
     ancientImgList[1].classList.contains('active') &&
     difficulty[0].classList.contains('act')
   ) {
+    cthulhuFirstStage = []
+    cthulhuSecondStage = []
+    cthulhuThirdStage = []
     for (let i = 0; i < 1; i++) {
       cthulhuSecondStage.push(shuffledEasiestLvlGreenCards.pop())
     }
@@ -121,6 +148,10 @@ shuffleBtn.addEventListener('click', () => {
     ancientImgList[2].classList.contains('active') &&
     difficulty[0].classList.contains('act')
   ) {
+    iogSothothFirstStage = []
+    iogSothothSecondStage = []
+    iogSothothThirdStage = []
+
     for (let i = 0; i < 1; i++) {
       iogSothothFirstStage.push(shuffledEasiestLvlBlueCards.pop())
       iogSothothSecondStage.push(shuffledEasiestLvlBlueCards.pop())
@@ -151,6 +182,9 @@ shuffleBtn.addEventListener('click', () => {
       ancientImgList[3].classList.contains('active')) &&
     difficulty[1].classList.contains('act')
   ) {
+    azathothFirstStage = []
+    azathothSecondStage = []
+    azathothThirdStage = []
     for (let i = 0; i < 1; i++) {
       azathothFirstStage.push(shuffledEasyLvlGreenCards.pop())
       azathothFirstStage.push(shuffledEasyLvlBlueCards.pop())
@@ -173,6 +207,9 @@ shuffleBtn.addEventListener('click', () => {
     ancientImgList[1].classList.contains('active') &&
     difficulty[1].classList.contains('act')
   ) {
+    cthulhuFirstStage = []
+    cthulhuSecondStage = []
+    cthulhuThirdStage = []
     for (let i = 0; i < 1; i++) {
       cthulhuSecondStage.push(shuffledEasyLvlGreenCards.pop())
     }
@@ -193,6 +230,9 @@ shuffleBtn.addEventListener('click', () => {
     ancientImgList[2].classList.contains('active') &&
     difficulty[1].classList.contains('act')
   ) {
+    iogSothothFirstStage = []
+    iogSothothSecondStage = []
+    iogSothothThirdStage = []
     for (let i = 0; i < 1; i++) {
       iogSothothFirstStage.push(shuffledEasyLvlBlueCards.pop())
       iogSothothSecondStage.push(shuffledEasyLvlBlueCards.pop())
@@ -220,6 +260,9 @@ shuffleBtn.addEventListener('click', () => {
       ancientImgList[3].classList.contains('active')) &&
     difficulty[2].classList.contains('act')
   ) {
+    azathothFirstStage = []
+    azathothSecondStage = []
+    azathothThirdStage = []
     for (let i = 0; i < 1; i++) {
       azathothFirstStage.push(shuffledAllGreenArr.pop())
       azathothFirstStage.push(shuffledAllBlueArr.pop())
@@ -242,6 +285,9 @@ shuffleBtn.addEventListener('click', () => {
     ancientImgList[1].classList.contains('active') &&
     difficulty[2].classList.contains('act')
   ) {
+    cthulhuFirstStage = []
+    cthulhuSecondStage = []
+    cthulhuThirdStage = []
     for (let i = 0; i < 1; i++) {
       cthulhuSecondStage.push(shuffledAllGreenArr.pop())
     }
@@ -262,6 +308,9 @@ shuffleBtn.addEventListener('click', () => {
     ancientImgList[2].classList.contains('active') &&
     difficulty[2].classList.contains('act')
   ) {
+    iogSothothFirstStage = []
+    iogSothothSecondStage = []
+    iogSothothThirdStage = []
     for (let i = 0; i < 1; i++) {
       iogSothothFirstStage.push(shuffledAllBlueArr.pop())
       iogSothothSecondStage.push(shuffledAllBlueArr.pop())
@@ -291,6 +340,9 @@ shuffleBtn.addEventListener('click', () => {
       ancientImgList[3].classList.contains('active')) &&
     difficulty[3].classList.contains('act')
   ) {
+    azathothFirstStage = []
+    azathothSecondStage = []
+    azathothThirdStage = []
     for (let i = 0; i < 1; i++) {
       azathothFirstStage.push(shuffledHardLvlGreenCards.pop())
       azathothFirstStage.push(shuffledHardLvlBlueCards.pop())
@@ -313,6 +365,9 @@ shuffleBtn.addEventListener('click', () => {
     ancientImgList[1].classList.contains('active') &&
     difficulty[3].classList.contains('act')
   ) {
+    cthulhuFirstStage = []
+    cthulhuSecondStage = []
+    cthulhuThirdStage = []
     for (let i = 0; i < 1; i++) {
       cthulhuSecondStage.push(shuffledHardLvlGreenCards.pop())
     }
@@ -333,6 +388,9 @@ shuffleBtn.addEventListener('click', () => {
     ancientImgList[2].classList.contains('active') &&
     difficulty[3].classList.contains('act')
   ) {
+    iogSothothFirstStage = []
+    iogSothothSecondStage = []
+    iogSothothThirdStage = []
     for (let i = 0; i < 1; i++) {
       iogSothothFirstStage.push(shuffledHardLvlBlueCards.pop())
       iogSothothSecondStage.push(shuffledHardLvlBlueCards.pop())
@@ -368,6 +426,9 @@ shuffleBtn.addEventListener('click', () => {
       ancientImgList[3].classList.contains('active')) &&
     difficulty[4].classList.contains('act')
   ) {
+    azathothFirstStage = []
+    azathothSecondStage = []
+    azathothThirdStage = []
     for (let i = 0; i < 1; i++) {
       azathothFirstStage.push(shuffledHardestLvlGreenCards.pop())
       azathothFirstStage.push(shuffledHardestLvlBlueCards.pop())
@@ -390,6 +451,9 @@ shuffleBtn.addEventListener('click', () => {
     ancientImgList[1].classList.contains('active') &&
     difficulty[4].classList.contains('act')
   ) {
+    cthulhuFirstStage = []
+    cthulhuSecondStage = []
+    cthulhuThirdStage = []
     for (let i = 0; i < 1; i++) {
       cthulhuSecondStage.push(shuffledHardestLvlGreenCards.pop())
     }
@@ -410,6 +474,9 @@ shuffleBtn.addEventListener('click', () => {
     ancientImgList[2].classList.contains('active') &&
     difficulty[4].classList.contains('act')
   ) {
+    iogSothothFirstStage = []
+    iogSothothSecondStage = []
+    iogSothothThirdStage = []
     for (let i = 0; i < 1; i++) {
       iogSothothFirstStage.push(shuffledHardestLvlBlueCards.pop())
       iogSothothSecondStage.push(shuffledHardestLvlBlueCards.pop())
@@ -426,12 +493,20 @@ shuffleBtn.addEventListener('click', () => {
       iogSothothThirdStage.push(shuffledHardestLvlBrownCards.pop())
     }
   }
-  arrAzathoth = [azathothThirdStage, azathothSecondStage, azathothFirstStage]
-  arrСthulhu = [cthulhuThirdStage, cthulhuSecondStage, cthulhuFirstStage]
+  arrAzathoth = [
+    shuffleCards(azathothThirdStage),
+    shuffleCards(azathothSecondStage),
+    shuffleCards(azathothFirstStage),
+  ]
+  arrСthulhu = [
+    shuffleCards(cthulhuThirdStage),
+    shuffleCards(cthulhuSecondStage),
+    shuffleCards(cthulhuFirstStage),
+  ]
   arrIogSothoth = [
-    iogSothothThirdStage,
-    iogSothothSecondStage,
-    iogSothothFirstStage,
+    shuffleCards(iogSothothThirdStage),
+    shuffleCards(iogSothothSecondStage),
+    shuffleCards(iogSothothFirstStage),
   ]
 })
 
@@ -465,31 +540,50 @@ deckBtn.addEventListener('click', () => {
     ancientImgList[0].classList.contains('active') ||
     ancientImgList[3].classList.contains('active')
   ) {
+    let lastElement = 0
     if (arrAzathoth[2].length != 0) {
       lastCard.classList.remove('hide')
-      let lastElement = arrAzathoth[2].pop()
+      lastElement = arrAzathoth[2].pop()
+      if (lastElement.color == 'green') {
+        lastCard.style.boxShadow = `0px 3px 29px 9px darkgreen`
+      } else if (lastElement.color == 'brown') {
+        lastCard.style.boxShadow = `0px 3px 29px 9px brown`
+      } else if (lastElement.color == 'blue') {
+        lastCard.style.boxShadow = `0px 3px 29px 9px blue`
+      }
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       for (let i = 0; i < 3; i++) {
-        allDots[i].textContent = countFunc(azathothFirstStage)[i]
+        allDots[i].textContent = countFunc(arrAzathoth[2])[i]
       }
-    }
-    if (arrAzathoth[2].length == 0 && arrAzathoth[1].length != 0) {
+    } else if (arrAzathoth[2].length == 0 && arrAzathoth[1].length != 0) {
       lastCard.classList.remove('hide')
-      let lastElement = arrAzathoth[1].pop()
+      lastElement = arrAzathoth[1].pop()
+      if (lastElement.color == 'green') {
+        lastCard.style.boxShadow = `0px 3px 29px 9px darkgreen`
+      } else if (lastElement.color == 'brown') {
+        lastCard.style.boxShadow = `0px 3px 29px 9px brown`
+      } else if (lastElement.color == 'blue') {
+        lastCard.style.boxShadow = `0px 3px 29px 9px blue`
+      }
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       for (let i = 3; i < 6; i++) {
-        allDots[i].textContent = countFunc(azathothSecondStage)[i - 3]
+        allDots[i].textContent = countFunc(arrAzathoth[1])[i - 3]
       }
-    }
-    if (arrAzathoth[1].length == 0 && arrAzathoth[0].length != 0) {
+    } else if (arrAzathoth[1].length == 0 && arrAzathoth[0].length != 0) {
       lastCard.classList.remove('hide')
-      let lastElement = arrAzathoth[0].pop()
+      lastElement = arrAzathoth[0].pop()
+      if (lastElement.color == 'green') {
+        lastCard.style.boxShadow = `0px 3px 29px 9px darkgreen`
+      } else if (lastElement.color == 'brown') {
+        lastCard.style.boxShadow = `0px 3px 29px 9px brown`
+      } else if (lastElement.color == 'blue') {
+        lastCard.style.boxShadow = `0px 3px 29px 9px blue`
+      }
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       for (let i = 6; i < 9; i++) {
-        allDots[i].textContent = countFunc(azathothThirdStage)[i - 6]
+        allDots[i].textContent = countFunc(arrAzathoth[0])[i - 6]
       }
-    }
-    if (arrAzathoth[0].length == 0) {
+    } else if (arrAzathoth[0].length == 0) {
       lastCard.classList.add('hide')
     }
   }
@@ -498,28 +592,46 @@ deckBtn.addEventListener('click', () => {
     if (arrСthulhu[2].length != 0) {
       lastCard.classList.remove('hide')
       let lastElement = arrСthulhu[2].pop()
+      if (lastElement.color == 'green') {
+        lastCard.style.boxShadow = `0px 3px 29px 9px darkgreen`
+      } else if (lastElement.color == 'brown') {
+        lastCard.style.boxShadow = `0px 3px 29px 9px brown`
+      } else if (lastElement.color == 'blue') {
+        lastCard.style.boxShadow = `0px 3px 29px 9px blue`
+      }
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       for (let i = 0; i < 3; i++) {
-        allDots[i].textContent = countFunc(cthulhuFirstStage)[i]
+        allDots[i].textContent = countFunc(arrСthulhu[2])[i]
       }
-    }
-    if (arrСthulhu[2].length == 0 && arrСthulhu[1].length != 0) {
+    } else if (arrСthulhu[2].length == 0 && arrСthulhu[1].length != 0) {
       lastCard.classList.remove('hide')
       let lastElement = arrСthulhu[1].pop()
+      if (lastElement.color == 'green') {
+        lastCard.style.boxShadow = `0px 3px 29px 9px darkgreen`
+      } else if (lastElement.color == 'brown') {
+        lastCard.style.boxShadow = `0px 3px 29px 9px brown`
+      } else if (lastElement.color == 'blue') {
+        lastCard.style.boxShadow = `0px 3px 29px 9px blue`
+      }
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       for (let i = 3; i < 6; i++) {
-        allDots[i].textContent = countFunc(cthulhuSecondStage)[i - 3]
+        allDots[i].textContent = countFunc(arrСthulhu[1])[i - 3]
       }
-    }
-    if (arrСthulhu[1].length == 0 && arrСthulhu[0].length != 0) {
+    } else if (arrСthulhu[1].length == 0 && arrСthulhu[0].length != 0) {
       lastCard.classList.remove('hide')
       let lastElement = arrСthulhu[0].pop()
+      if (lastElement.color == 'green') {
+        lastCard.style.boxShadow = `0px 3px 29px 9px darkgreen`
+      } else if (lastElement.color == 'brown') {
+        lastCard.style.boxShadow = `0px 3px 29px 9px brown`
+      } else if (lastElement.color == 'blue') {
+        lastCard.style.boxShadow = `0px 3px 29px 9px blue`
+      }
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       for (let i = 6; i < 9; i++) {
-        allDots[i].textContent = countFunc(cthulhuThirdStage)[i - 6]
+        allDots[i].textContent = countFunc(arrСthulhu[0])[i - 6]
       }
-    }
-    if (arrСthulhu[0].length == 0) {
+    } else if (arrСthulhu[0].length == 0) {
       lastCard.classList.add('hide')
     }
   }
@@ -528,28 +640,46 @@ deckBtn.addEventListener('click', () => {
     if (arrIogSothoth[2].length != 0) {
       lastCard.classList.remove('hide')
       let lastElement = arrIogSothoth[2].pop()
+      if (lastElement.color == 'green') {
+        lastCard.style.boxShadow = `0px 3px 29px 9px darkgreen`
+      } else if (lastElement.color == 'brown') {
+        lastCard.style.boxShadow = `0px 3px 29px 9px brown`
+      } else if (lastElement.color == 'blue') {
+        lastCard.style.boxShadow = `0px 3px 29px 9px blue`
+      }
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       for (let i = 0; i < 3; i++) {
-        allDots[i].textContent = countFunc(iogSothothFirstStage)[i]
+        allDots[i].textContent = countFunc(arrIogSothoth[2])[i]
       }
-    }
-    if (arrIogSothoth[2].length == 0 && arrIogSothoth[1].length != 0) {
+    } else if (arrIogSothoth[2].length == 0 && arrIogSothoth[1].length != 0) {
       lastCard.classList.remove('hide')
       let lastElement = arrIogSothoth[1].pop()
+      if (lastElement.color == 'green') {
+        lastCard.style.boxShadow = `0px 3px 29px 9px darkgreen`
+      } else if (lastElement.color == 'brown') {
+        lastCard.style.boxShadow = `0px 3px 29px 9px brown`
+      } else if (lastElement.color == 'blue') {
+        lastCard.style.boxShadow = `0px 3px 29px 9px blue`
+      }
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       for (let i = 3; i < 6; i++) {
-        allDots[i].textContent = countFunc(iogSothothSecondStage)[i - 3]
+        allDots[i].textContent = countFunc(arrIogSothoth[1])[i - 3]
       }
-    }
-    if (arrIogSothoth[1].length == 0 && arrIogSothoth[0].length != 0) {
+    } else if (arrIogSothoth[1].length == 0 && arrIogSothoth[0].length != 0) {
       lastCard.classList.remove('hide')
       let lastElement = arrIogSothoth[0].pop()
+      if (lastElement.color == 'green') {
+        lastCard.style.boxShadow = `0px 3px 29px 9px darkgreen`
+      } else if (lastElement.color == 'brown') {
+        lastCard.style.boxShadow = `0px 3px 29px 9px brown`
+      } else if (lastElement.color == 'blue') {
+        lastCard.style.boxShadow = `0px 3px 29px 9px blue`
+      }
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       for (let i = 6; i < 9; i++) {
-        allDots[i].textContent = countFunc(iogSothothThirdStage)[i - 6]
+        allDots[i].textContent = countFunc(arrIogSothoth[0])[i - 6]
       }
-    }
-    if (arrIogSothoth[0].length == 0) {
+    } else if (arrIogSothoth[0].length == 0) {
       lastCard.classList.add('hide')
     }
   }
@@ -569,42 +699,6 @@ for (var i = 0; i < ancientImgList.length; i++) {
       counter.classList.remove('hide')
     } else {
       this.active += ' ' + active
-    }
-    // устанавливаем значения счетчика по умолчанию
-    if (ancientImgList[0].classList.contains('active')) {
-      for (let k = 0; k < allDots.length; k++) {
-        allDots[k].textContent = azathothCount[k]
-      }
-    }
-    if (ancientImgList[1].classList.contains('active')) {
-      for (let k = 0; k < allDots.length; k++) {
-        allDots[k].textContent = cthulhuCount[k]
-      }
-    }
-    if (ancientImgList[2].classList.contains('active')) {
-      for (let k = 0; k < allDots.length; k++) {
-        allDots[k].textContent = iogSothothCount[k]
-      }
-    }
-    if (ancientImgList[3].classList.contains('active')) {
-      for (let k = 0; k < allDots.length; k++) {
-        allDots[k].textContent = shubNiggurathCount[k]
-      }
-    }
-  }
-}
-
-const difficulty = document.querySelectorAll('.difficulty')
-// выбираем сложность, добавлчем класс act
-for (var i = 0; i < difficulty.length; i++) {
-  difficulty[i].onclick = function () {
-    if (this.classList) {
-      for (var j = 0; j < difficulty.length; j++) {
-        difficulty[j].classList.remove('act')
-      }
-      this.classList.add('act')
-    } else {
-      this.act += ' ' + act
     }
   }
 }
@@ -677,3 +771,21 @@ allHardCards.forEach((el) => {
     allHardBrownCards.push(el)
   }
 })
+
+const difficulty = document.querySelectorAll('.difficulty')
+// выбираем сложность, добавлчем класс act
+for (var i = 0; i < difficulty.length; i++) {
+  arrAzathoth = []
+  arrСthulhu = []
+  arrIogSothoth = []
+  difficulty[i].onclick = function () {
+    if (this.classList) {
+      for (var j = 0; j < difficulty.length; j++) {
+        difficulty[j].classList.remove('act')
+      }
+      this.classList.add('act')
+    } else {
+      this.act += ' ' + act
+    }
+  }
+}
