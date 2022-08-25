@@ -218,6 +218,87 @@ shuffleBtn.addEventListener('click', () => {
     console.log('iogSothothSecondStage', iogSothothSecondStage)
     console.log('iogSothothThirdStage', iogSothothThirdStage)
   }
+  //========================= Если выбран HARD LVL========================
+  let hardLvlGreenCards = [...allHardGreenCards, ...allNormalGreenCards]
+  let shuffledHardLvlGreenCards = shuffleCards(hardLvlGreenCards)
+  let hardLvlBlueCards = [...allHardBlueCards, ...allNormalBlueCards]
+  let shuffledHardLvlBlueCards = shuffleCards(hardLvlBlueCards)
+  let hardLvlBrownCards = [...allHardBrownCards, ...allNormalBrownCards]
+  let shuffledHardLvlBrownCards = shuffleCards(hardLvlBrownCards)
+  //азатот и шуб-ниггурат
+  if (
+    (ancientImgList[0].classList.contains('active') ||
+      ancientImgList[3].classList.contains('active')) &&
+    difficulty[3].classList.contains('act')
+  ) {
+    for (let i = 0; i < 1; i++) {
+      azathothFirstStage.push(shuffledHardLvlGreenCards.pop())
+      azathothFirstStage.push(shuffledHardLvlBlueCards.pop())
+      azathothSecondStage.push(shuffledHardLvlBlueCards.pop())
+    }
+    for (let i = 0; i < 2; i++) {
+      azathothFirstStage.push(shuffledHardLvlBrownCards.pop())
+      azathothSecondStage.push(shuffledHardLvlBrownCards.pop())
+      azathothThirdStage.push(shuffledHardLvlGreenCards.pop())
+    }
+    for (let i = 0; i < 3; i++) {
+      azathothSecondStage.push(shuffledHardLvlGreenCards.pop())
+    }
+    for (let i = 0; i < 4; i++) {
+      azathothThirdStage.push(shuffledHardLvlBrownCards.pop())
+    }
+    console.log('azathothFirstStage', azathothFirstStage)
+    console.log('azathothSecondStage', azathothSecondStage)
+    console.log('azathothThirdStage', azathothThirdStage)
+  }
+  // ктулху
+  if (
+    ancientImgList[1].classList.contains('active') &&
+    difficulty[3].classList.contains('act')
+  ) {
+    for (let i = 0; i < 1; i++) {
+      cthulhuSecondStage.push(shuffledHardLvlGreenCards.pop())
+    }
+    for (let i = 0; i < 2; i++) {
+      cthulhuFirstStage.push(shuffledHardLvlBrownCards.pop())
+      cthulhuFirstStage.push(shuffledHardLvlBlueCards.pop())
+    }
+    for (let i = 0; i < 3; i++) {
+      cthulhuSecondStage.push(shuffledHardLvlBrownCards.pop())
+      cthulhuThirdStage.push(shuffledHardLvlGreenCards.pop())
+    }
+    for (let i = 0; i < 4; i++) {
+      cthulhuThirdStage.push(shuffledHardLvlBrownCards.pop())
+    }
+    console.log('cthulhuFirstStage', cthulhuFirstStage)
+    console.log('cthulhuSecondStage', cthulhuSecondStage)
+    console.log('cthulhuThirdStage', cthulhuThirdStage)
+  }
+  // йогсотот
+  if (
+    ancientImgList[2].classList.contains('active') &&
+    difficulty[3].classList.contains('act')
+  ) {
+    for (let i = 0; i < 1; i++) {
+      iogSothothFirstStage.push(shuffledHardLvlBlueCards.pop())
+      iogSothothSecondStage.push(shuffledHardLvlBlueCards.pop())
+    }
+    for (let i = 0; i < 2; i++) {
+      iogSothothFirstStage.push(shuffledHardLvlBrownCards.pop())
+      iogSothothSecondStage.push(shuffledHardLvlGreenCards.pop())
+    }
+    for (let i = 0; i < 3; i++) {
+      iogSothothSecondStage.push(shuffledHardLvlBrownCards.pop())
+      iogSothothThirdStage.push(shuffledHardLvlGreenCards.pop())
+    }
+    for (let i = 0; i < 4; i++) {
+      iogSothothThirdStage.push(shuffledHardLvlBrownCards.pop())
+    }
+    console.log('iogSothothFirstStage', iogSothothFirstStage)
+    console.log('iogSothothSecondStage', iogSothothSecondStage)
+    console.log('iogSothothThirdStage', iogSothothThirdStage)
+  }
+
   arrAzathoth = [azathothThirdStage, azathothSecondStage, azathothFirstStage]
   arrСthulhu = [cthulhuThirdStage, cthulhuSecondStage, cthulhuFirstStage]
   arrIogSothoth = [
@@ -249,7 +330,7 @@ function countFunc(arr) {
 }
 
 const lastCard = document.querySelector('.last-card')
-// кнопка-карта
+//================== кнопка-карта===================
 
 deckBtn.addEventListener('click', () => {
   // азатот или шабниггурат
@@ -258,6 +339,7 @@ deckBtn.addEventListener('click', () => {
     ancientImgList[3].classList.contains('active')
   ) {
     if (arrAzathoth[2].length != 0) {
+      lastCard.classList.remove('hide')
       let lastElement = arrAzathoth[2].pop()
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       for (let i = 0; i < 3; i++) {
@@ -265,6 +347,7 @@ deckBtn.addEventListener('click', () => {
       }
     }
     if (arrAzathoth[2].length == 0 && arrAzathoth[1].length != 0) {
+      lastCard.classList.remove('hide')
       let lastElement = arrAzathoth[1].pop()
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       for (let i = 3; i < 6; i++) {
@@ -272,16 +355,21 @@ deckBtn.addEventListener('click', () => {
       }
     }
     if (arrAzathoth[1].length == 0 && arrAzathoth[0].length != 0) {
+      lastCard.classList.remove('hide')
       let lastElement = arrAzathoth[0].pop()
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       for (let i = 6; i < 9; i++) {
         allDots[i].textContent = countFunc(azathothThirdStage)[i - 6]
       }
     }
+    if (arrAzathoth[0].length == 0) {
+      lastCard.classList.add('hide')
+    }
   }
   // ктулху
   if (ancientImgList[1].classList.contains('active')) {
     if (arrСthulhu[2].length != 0) {
+      lastCard.classList.remove('hide')
       let lastElement = arrСthulhu[2].pop()
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       for (let i = 0; i < 3; i++) {
@@ -289,6 +377,7 @@ deckBtn.addEventListener('click', () => {
       }
     }
     if (arrСthulhu[2].length == 0 && arrСthulhu[1].length != 0) {
+      lastCard.classList.remove('hide')
       let lastElement = arrСthulhu[1].pop()
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       for (let i = 3; i < 6; i++) {
@@ -296,16 +385,21 @@ deckBtn.addEventListener('click', () => {
       }
     }
     if (arrСthulhu[1].length == 0 && arrСthulhu[0].length != 0) {
+      lastCard.classList.remove('hide')
       let lastElement = arrСthulhu[0].pop()
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       for (let i = 6; i < 9; i++) {
         allDots[i].textContent = countFunc(cthulhuThirdStage)[i - 6]
       }
     }
+    if (arrСthulhu[0].length == 0) {
+      lastCard.classList.add('hide')
+    }
   }
   // йогсотот
   if (ancientImgList[2].classList.contains('active')) {
     if (arrIogSothoth[2].length != 0) {
+      lastCard.classList.remove('hide')
       let lastElement = arrIogSothoth[2].pop()
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       for (let i = 0; i < 3; i++) {
@@ -313,6 +407,7 @@ deckBtn.addEventListener('click', () => {
       }
     }
     if (arrIogSothoth[2].length == 0 && arrIogSothoth[1].length != 0) {
+      lastCard.classList.remove('hide')
       let lastElement = arrIogSothoth[1].pop()
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       for (let i = 3; i < 6; i++) {
@@ -320,11 +415,15 @@ deckBtn.addEventListener('click', () => {
       }
     }
     if (arrIogSothoth[1].length == 0 && arrIogSothoth[0].length != 0) {
+      lastCard.classList.remove('hide')
       let lastElement = arrIogSothoth[0].pop()
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       for (let i = 6; i < 9; i++) {
         allDots[i].textContent = countFunc(iogSothothThirdStage)[i - 6]
       }
+    }
+    if (arrIogSothoth[0].length == 0) {
+      lastCard.classList.add('hide')
     }
   }
 })
