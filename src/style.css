@@ -74,7 +74,8 @@ main {
   width: 240px;
 }
 
-.ancient_div:hover {
+.ancient_div:hover,
+.deck:hover {
   scale: 1.05;
   transition: all ease 0.5s;
   box-shadow: 0px 3px 17px 5px gold;
@@ -101,14 +102,16 @@ main {
 }
 .shuffle {
   cursor: pointer;
-  border-color: black;
+  border: 1px blueviolet;
   background: transparent;
   border-radius: 5px;
   padding: 0 5px;
+  box-shadow: 0px 3px 17px 5px blueviolet, inset 0px 0px 10px 5px blueviolet;
 }
 .shuffle:hover {
   color: darkviolet;
   transition: all ease 1s;
+  box-shadow: 0px 3px 17px 5px gold, inset 0px 3px 17px 2px gold;
 }
 .difficulty-container {
   display: flex;
