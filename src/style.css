@@ -70,8 +70,8 @@ main {
   background-size: contain;
   box-sizing: border-box;
   cursor: pointer;
-  height: 260px;
-  width: 200px;
+  height: 310px;
+  width: 240px;
 }
 
 .ancient_div:hover {
@@ -156,8 +156,8 @@ main {
 .last-card {
   transition: all ease 1s;
   background-size: cover;
-  height: 260px;
-  width: 200px;
+  height: 310px;
+  width: 240px;
 }
 
 .current-state {
