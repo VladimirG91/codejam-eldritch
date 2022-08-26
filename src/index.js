@@ -3,6 +3,7 @@ import ancientsData from './data/ancients.js'
 import allBlueCards from './data/mythicCards/blue/index.js'
 import allBrownCards from './data/mythicCards/brown/index.js'
 import allGreenCards from './data/mythicCards/green/index.js'
+import playList from './playList.js'
 
 console.log(
   'Здравствуйте! После выбора карты древнего обязательно нажмите кнопку SHUFFLE=)'
@@ -784,5 +785,234 @@ for (var i = 0; i < difficulty.length; i++) {
     } else {
       this.act += ' ' + act
     }
+  }
+}
+
+// new player
+
+const player = document.querySelector('.player'),
+  musicImg = document.querySelector('.img-area img'),
+  musicName = document.querySelector('.song-details .nameSong'),
+  mainAudio = document.querySelector('#main-audio'),
+  playPauseBtn = document.querySelector('.play-pause'),
+  prevBtn = document.querySelector('#prev'),
+  nextBtn = document.querySelector('#next'),
+  progressArea = document.querySelector('.progress-area'),
+  progressBar = document.querySelector('.progress-bar'),
+  musicList = document.querySelector('.music-list'),
+  showMoreBtn = document.querySelector('#more-music'),
+  hideMusicBtn = document.querySelector('#close'),
+  topBar = document.querySelector('.top-bar'),
+  controls = document.querySelector('.controls')
+
+let musicIndex = 0
+
+// после загрузки страницы вызываем функцию загрущки музыки
+window.addEventListener('load', () => {
+  loadMusic(musicIndex)
+})
+
+// функция загрузки музыки, меняет тайтл, картинку, сорс песни
+function loadMusic(indexNum) {
+  musicName.innerText = playList[indexNum].title
+  musicImg.src = playList[indexNum].img
+  mainAudio.src = playList[indexNum].src
+}
+// запускает песню, добавляет класс paused, меняем значок кнопки play
+function playMusic() {
+  player.classList.add('paused')
+  playPauseBtn.querySelector('i').innerText = 'pause'
+  mainAudio.play()
+  playingSong()
+}
+// останавливает песню, убирает класс paused, меняем значок кнопки play
+function pauseMusic() {
+  player.classList.remove('paused')
+  playPauseBtn.querySelector('i').innerText = 'play_arrow'
+  mainAudio.pause()
+  playingSong()
+}
+// переключение на следующую композицию, после последней песни включается первая
+function nextMusic() {
+  musicIndex++
+  if (musicIndex > playList.length - 1) {
+    musicIndex = 0
+  }
+  loadMusic(musicIndex)
+  playMusic()
+  playingSong()
+}
+// переключение на предыдущую композицию, после первой песни включается последняя
+function prevMusic() {
+  musicIndex--
+  if (musicIndex < 0) {
+    musicIndex = playList.length - 1
+  }
+  loadMusic(musicIndex)
+  playMusic()
+  playingSong()
+}
+
+// при клике на кнопку плей, проверяем содержит ли player класс paused, если да, тогда вызвваем ф-ю паузы, если нет тогда запускаем песню
+playPauseBtn.addEventListener('click', () => {
+  const isMusicPaused = player.classList.contains('paused')
+  isMusicPaused ? pauseMusic() : playMusic()
+  playingSong()
+})
+
+// при клике на кнопку следующая песня
+nextBtn.addEventListener('click', () => {
+  nextMusic()
+})
+
+// при клике на кнопку предыдущая песня
+prevBtn.addEventListener('click', () => {
+  prevMusic()
+})
+
+// меняем прогрессбар при воспроизведении музыки
+
+mainAudio.addEventListener('timeupdate', (e) => {
+  const currentTime = e.target.currentTime
+  const duration = e.target.duration
+  let progressWidth = (currentTime / duration) * 100
+  progressBar.style.width = `${progressWidth}%`
+  let musicCurrentTime = document.querySelector('.current'),
+    musicDuration = document.querySelector('.duration')
+
+  mainAudio.addEventListener('loadeddata', () => {
+    // находим длительность песни
+    let audioDuration = mainAudio.duration
+    let min = Math.floor(audioDuration / 60)
+    let sec = Math.floor(audioDuration % 60)
+    // если меньше 10, добиваем 0, чтобы было красиво)
+    if (sec < 10) {
+      sec = `0${sec}`
+    }
+    if (min < 10) {
+      min = `0${min}`
+    }
+    musicDuration.innerText = `${min}:${sec}`
+  })
+
+  let currentMin = Math.floor(currentTime / 60)
+  let currentSec = Math.floor(currentTime % 60)
+  if (currentSec < 10) {
+    currentSec = `0${currentSec}`
+  }
+  if (currentMin < 10) {
+    currentMin = `0${currentMin}`
+  }
+  musicCurrentTime.innerText = `${currentMin}:${currentSec}`
+})
+
+// функция перемотки песни
+progressArea.addEventListener('click', (e) => {
+  let progressWidthval = progressArea.clientWidth // находим ширину прогрессбара
+  let clickedOffsetX = e.offsetX // получем знамение по оси Х
+  let songDuration = mainAudio.duration // общая длительность песни
+  // устанавливаем значение текущего времени песни
+  mainAudio.currentTime = (clickedOffsetX / progressWidthval) * songDuration
+  playMusic()
+})
+
+// Autoplay
+mainAudio.addEventListener('ended', nextMusic)
+
+// создаем массив классов, для скрытия
+let arr = [topBar, musicImg, musicName, progressArea, controls]
+
+// добавляем класс show плейлисту, класс hide массиву
+showMoreBtn.addEventListener('click', () => {
+  musicList.classList.toggle('show')
+  arr.forEach((element) => {
+    element.classList.add('hide')
+  })
+})
+
+// убираем класс show, hide
+hideMusicBtn.addEventListener('click', () => {
+  musicList.classList.toggle('show')
+  arr.forEach((element) => {
+    element.classList.remove('hide')
+  })
+})
+
+//
+const ulTag = document.querySelector('ul')
+
+// циклом создаем элементы li используя шаблонную строку, помещаем созданные элемент в конец ul
+for (let i = 0; i < playList.length; i++) {
+  let liTag = `<li class="playlist-element el-${i}" li-index="${i}" >
+  <div class="row1">
+    <span>${playList[i].title}</span>
+    <span class="audio-duration ${playList[i].id}">${playList[i].duration}</span>
+    <audio id="${playList[i].id}" src="${playList[i].src}"></audio>
+  </div>
+</li>`
+  ulTag.insertAdjacentHTML('beforeend', liTag)
+}
+//
+function playingSong() {
+  const allLiTag = document.querySelectorAll('.playlist-element')
+
+  for (let j = 0; j < allLiTag.length; j++) {
+    let audioTag = allLiTag[j].querySelector('.audio-duration')
+
+    if (allLiTag[j].classList.contains('playing')) {
+      allLiTag[j].classList.remove('playing')
+    }
+    if (allLiTag[j].getAttribute('li-index') == musicIndex) {
+      allLiTag[j].classList.add('playing')
+    }
+  }
+}
+
+const alLi = document.querySelectorAll('.playlist-element')
+// вешаем листнеров на liшки
+for (let k = 0; k < alLi.length; k++) {
+  alLi[k].addEventListener('click', () => {
+    musicIndex = k
+    loadMusic(musicIndex)
+    playMusic()
+  })
+}
+
+// делаем скрытие картинки альбома
+const hideImg = document.querySelector('.arrow_down')
+const imgArea = document.querySelector('.img-area')
+hideImg.addEventListener('click', () => {
+  imgArea.classList.toggle('none')
+  hideImg.classList.toggle('blue_color')
+})
+
+// volume
+const volume = document.querySelector('.controls input')
+volume.addEventListener('change', () => {
+  mainAudio.volume = volume.value / 100
+  if (volume.value == 0) {
+    volume_iconBtn.innerText = 'volume_off'
+    volume_iconBtn.classList.add('mute')
+    volume_iconBtn.classList.add('blue_color')
+  } else {
+    volume_iconBtn.innerText = 'volume_up'
+    volume_iconBtn.classList.remove('blue_color')
+  }
+})
+
+// volume mute/unmute
+const volume_iconBtn = document.querySelector('#volume-icon')
+
+volume_iconBtn.onclick = function () {
+  if (mainAudio.muted == false) {
+    mainAudio.muted = true
+    volume_iconBtn.innerText = 'volume_off'
+    volume_iconBtn.classList.add('blue_color')
+    volume.value = 0
+  } else {
+    mainAudio.muted = false
+    volume_iconBtn.innerText = 'volume_up'
+    volume.value = 50
+    volume_iconBtn.classList.remove('blue_color')
   }
 }

@@ -7,6 +7,10 @@
     <title>Codejam</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="shortcut icon" href="./data/octopus.svg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
   </head>
   <body>
     <header class="header"></header>
@@ -52,6 +56,56 @@
         <div class="deck hide"></div>
         <div class="last-card"></div>
       </div>
+      <!-- Player start -->
+      <div class="player">
+        <div class="top-bar">
+          <i class="material-icons arrow_down">expand_more</i>
+          <span>Now Playing</span>
+          <i class="material-icons">more_horiz</i>
+        </div>
+        <div class="img-area">
+          <img src="" alt="" />
+        </div>
+        <div class="song-details">
+          <p class="nameSong"></p>
+        </div>
+        <div class="progress-area">
+          <div class="progress-bar"></div>
+          <div class="timer">
+            <span class="current">00:00</span>
+            <span class="duration"></span>
+          </div>
+          <audio id="main-audio" volume="" src=""></audio>
+        </div>
+        <div class="controls">
+          <i id="volume-icon" class="material-icons">volume_up</i>
+          <input
+            class="volume"
+            id="volume"
+            type="range"
+            max="100"
+            step="1"
+            value="50"
+          />
+          <i id="prev" class="material-icons">skip_previous</i>
+          <div class="play-pause">
+            <i class="material-icons">play_arrow</i>
+          </div>
+          <i id="next" class="material-icons">skip_next</i>
+          <i id="more-music" class="material-icons">queue_music</i>
+        </div>
+        <div class="music-list">
+          <div class="header1">
+            <div class="row">
+              <i class="material-icons">queue_music</i>
+              <span class="musicList">Music list</span>
+              <i id="close" class="material-icons">close</i>
+            </div>
+          </div>
+          <ul></ul>
+        </div>
+      </div>
+      <!-- Player end -->
     </main>
     <footer class="footer"></footer>
     <script type="module" src="./index.js"></script>
