@@ -1,11 +1,11 @@
-import difficulties from './data/difficulties'
-import ancientsData from './data/ancients'
-import allBlueCards from './data/mythicCards/blue/index'
-import allBrownCards from './data/mythicCards/brown/index'
-import allGreenCards from './data/mythicCards/green/index'
+import difficulties from './data/difficulties.js'
+import ancientsData from './data/ancients.js'
+import allBlueCards from './data/mythicCards/blue/index.js'
+import allBrownCards from './data/mythicCards/brown/index.js'
+import allGreenCards from './data/mythicCards/green/index.js'
 
 console.log(
-  'Здравствуйте, после выбора карты древнего, обязательно нажмите кнопку shuffle=)'
+  'Здравствуйте! После выбора карты древнего обязательно нажмите кнопку SHUFFLE=)'
 )
 
 const ancients = document.querySelector('.ancients')
