@@ -27,7 +27,7 @@ const cardsData = [
   },
   {
     id: 'green5',
-    cardFace: './assets/MythicCards/green/green5.jpg',
+    cardFace: './src/assets/MythicCards/green/green5.jpg',
     difficulty: 'hard',
     color: 'green',
   },
@@ -45,7 +45,7 @@ const cardsData = [
   },
   {
     id: 'green8',
-    cardFace: './assets/MythicCards/green/green8.jpg',
+    cardFace: './src/assets/MythicCards/green/green8.jpg',
     difficulty: 'normal',
     color: 'green',
   },
