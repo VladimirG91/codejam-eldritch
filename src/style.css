@@ -156,7 +156,7 @@ main {
 
 .deck,
 .last-card {
-  transition: all ease 1s;
+  transition: all ease 0.8s;
   background-size: cover;
   height: 310px;
   width: 240px;
@@ -206,6 +206,20 @@ main {
   background: blue;
 }
 
+.shadow_green {
+  transition: all ease 0.8s;
+  box-shadow: 0px 3px 29px 9px darkgreen;
+}
+
+.shadow_brown {
+  transition: all ease 0.8s;
+  box-shadow: 0px 3px 29px 9px brown;
+}
+
+.shadow_blue {
+  transition: all ease 0.8s;
+  box-shadow: 0px 3px 29px 9px brown;
+}
 /* Player */
 .nameSong {
   font-size: 15px;
