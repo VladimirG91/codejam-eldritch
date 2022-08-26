@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codejam</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./src/data/octopus.svg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body>
+    <header class="header"></header>
+    <main class="main">
+      <div class="ancients"></div>
+      <div class="difficulty-container hide">
+        <div class="difficulty">Easiest</div>
+        <div class="difficulty">Easy</div>
+        <div class="difficulty">Normal</div>
+        <div class="difficulty">Hard</div>
+        <div class="difficulty">Hardest</div>
+      </div>
+      <div class="shuffle-btn hide">
+        <button class="shuffle">shuffle</button>
+      </div>
+      <div class="counter-container hide">
+        <div class="current-state">
+          <div class="stage-container">
+            <span class="stage-text">First stage</span>
+            <div class="dots-container-1">
+              <div class="dot green">0</div>
+              <div class="dot brown">0</div>
+              <div class="dot blue">0</div>
+            </div>
+          </div>
+          <div class="stage-container">
+            <span class="stage-text">Second stage</span>
+            <div class="dots-container-2">
+              <div class="dot green">0</div>
+              <div class="dot brown">0</div>
+              <div class="dot blue">0</div>
+            </div>
+          </div>
+          <div class="stage-container">
+            <span class="stage-text">Third stage</span>
+            <div class="dots-container-3">
+              <div class="dot green">0</div>
+              <div class="dot brown">0</div>
+              <div class="dot blue">0</div>
+            </div>
+          </div>
+        </div>
+        <div class="deck hide"></div>
+        <div class="last-card"></div>
+      </div>
+      <!-- Player start -->
+      <div class="player">
+        <div class="top-bar">
+          <i class="material-icons arrow_down">expand_more</i>
+          <span>Now Playing</span>
+          <i class="material-icons">more_horiz</i>
+        </div>
+        <div class="img-area">
+          <img src="" alt="" />
+        </div>
+        <div class="song-details">
+          <p class="nameSong"></p>
+        </div>
+        <div class="progress-area">
+          <div class="progress-bar"></div>
+          <div class="timer">
+            <span class="current">00:00</span>
+            <span class="duration"></span>
+          </div>
+          <audio id="main-audio" volume="" src=""></audio>
+        </div>
+        <div class="controls">
+          <i id="volume-icon" class="material-icons">volume_up</i>
+          <input
+            class="volume"
+            id="volume"
+            type="range"
+            max="100"
+            step="1"
+            value="50"
+          />
+          <i id="prev" class="material-icons">skip_previous</i>
+          <div class="play-pause">
+            <i class="material-icons">play_arrow</i>
+          </div>
+          <i id="next" class="material-icons">skip_next</i>
+          <i id="more-music" class="material-icons">queue_music</i>
+        </div>
+        <div class="music-list">
+          <div class="header1">
+            <div class="row">
+              <i class="material-icons">queue_music</i>
+              <span class="musicList">Music list</span>
+              <i id="close" class="material-icons">close</i>
+            </div>
+          </div>
+          <ul></ul>
+        </div>
+      </div>
+      <!-- Player end -->
+    </main>
+    <footer class="footer"></footer>
+    <script type="module" src="./src/index.js"></script>
+  </body>
+</html>
