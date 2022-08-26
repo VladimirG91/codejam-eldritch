@@ -545,6 +545,7 @@ deckBtn.addEventListener('click', () => {
     if (arrAzathoth[2].length != 0) {
       lastCard.classList.remove('hide')
       lastElement = arrAzathoth[2].pop()
+      lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       if (lastElement.color == 'green') {
         lastCard.style.boxShadow = `0px 3px 29px 9px darkgreen`
       } else if (lastElement.color == 'brown') {
@@ -552,13 +553,13 @@ deckBtn.addEventListener('click', () => {
       } else if (lastElement.color == 'blue') {
         lastCard.style.boxShadow = `0px 3px 29px 9px blue`
       }
-      lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       for (let i = 0; i < 3; i++) {
         allDots[i].textContent = countFunc(arrAzathoth[2])[i]
       }
     } else if (arrAzathoth[2].length == 0 && arrAzathoth[1].length != 0) {
       lastCard.classList.remove('hide')
       lastElement = arrAzathoth[1].pop()
+      lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       if (lastElement.color == 'green') {
         lastCard.style.boxShadow = `0px 3px 29px 9px darkgreen`
       } else if (lastElement.color == 'brown') {
@@ -566,13 +567,13 @@ deckBtn.addEventListener('click', () => {
       } else if (lastElement.color == 'blue') {
         lastCard.style.boxShadow = `0px 3px 29px 9px blue`
       }
-      lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       for (let i = 3; i < 6; i++) {
         allDots[i].textContent = countFunc(arrAzathoth[1])[i - 3]
       }
     } else if (arrAzathoth[1].length == 0 && arrAzathoth[0].length != 0) {
       lastCard.classList.remove('hide')
       lastElement = arrAzathoth[0].pop()
+      lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       if (lastElement.color == 'green') {
         lastCard.style.boxShadow = `0px 3px 29px 9px darkgreen`
       } else if (lastElement.color == 'brown') {
@@ -580,7 +581,6 @@ deckBtn.addEventListener('click', () => {
       } else if (lastElement.color == 'blue') {
         lastCard.style.boxShadow = `0px 3px 29px 9px blue`
       }
-      lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       for (let i = 6; i < 9; i++) {
         allDots[i].textContent = countFunc(arrAzathoth[0])[i - 6]
       }
@@ -593,6 +593,7 @@ deckBtn.addEventListener('click', () => {
     if (arrСthulhu[2].length != 0) {
       lastCard.classList.remove('hide')
       let lastElement = arrСthulhu[2].pop()
+      lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       if (lastElement.color == 'green') {
         lastCard.style.boxShadow = `0px 3px 29px 9px darkgreen`
       } else if (lastElement.color == 'brown') {
@@ -600,13 +601,13 @@ deckBtn.addEventListener('click', () => {
       } else if (lastElement.color == 'blue') {
         lastCard.style.boxShadow = `0px 3px 29px 9px blue`
       }
-      lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       for (let i = 0; i < 3; i++) {
         allDots[i].textContent = countFunc(arrСthulhu[2])[i]
       }
     } else if (arrСthulhu[2].length == 0 && arrСthulhu[1].length != 0) {
       lastCard.classList.remove('hide')
       let lastElement = arrСthulhu[1].pop()
+      lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       if (lastElement.color == 'green') {
         lastCard.style.boxShadow = `0px 3px 29px 9px darkgreen`
       } else if (lastElement.color == 'brown') {
@@ -614,13 +615,13 @@ deckBtn.addEventListener('click', () => {
       } else if (lastElement.color == 'blue') {
         lastCard.style.boxShadow = `0px 3px 29px 9px blue`
       }
-      lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       for (let i = 3; i < 6; i++) {
         allDots[i].textContent = countFunc(arrСthulhu[1])[i - 3]
       }
     } else if (arrСthulhu[1].length == 0 && arrСthulhu[0].length != 0) {
       lastCard.classList.remove('hide')
       let lastElement = arrСthulhu[0].pop()
+      lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       if (lastElement.color == 'green') {
         lastCard.style.boxShadow = `0px 3px 29px 9px darkgreen`
       } else if (lastElement.color == 'brown') {
@@ -628,7 +629,6 @@ deckBtn.addEventListener('click', () => {
       } else if (lastElement.color == 'blue') {
         lastCard.style.boxShadow = `0px 3px 29px 9px blue`
       }
-      lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       for (let i = 6; i < 9; i++) {
         allDots[i].textContent = countFunc(arrСthulhu[0])[i - 6]
       }
@@ -641,6 +641,7 @@ deckBtn.addEventListener('click', () => {
     if (arrIogSothoth[2].length != 0) {
       lastCard.classList.remove('hide')
       let lastElement = arrIogSothoth[2].pop()
+      lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       if (lastElement.color == 'green') {
         lastCard.style.boxShadow = `0px 3px 29px 9px darkgreen`
       } else if (lastElement.color == 'brown') {
@@ -648,13 +649,13 @@ deckBtn.addEventListener('click', () => {
       } else if (lastElement.color == 'blue') {
         lastCard.style.boxShadow = `0px 3px 29px 9px blue`
       }
-      lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       for (let i = 0; i < 3; i++) {
         allDots[i].textContent = countFunc(arrIogSothoth[2])[i]
       }
     } else if (arrIogSothoth[2].length == 0 && arrIogSothoth[1].length != 0) {
       lastCard.classList.remove('hide')
       let lastElement = arrIogSothoth[1].pop()
+      lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       if (lastElement.color == 'green') {
         lastCard.style.boxShadow = `0px 3px 29px 9px darkgreen`
       } else if (lastElement.color == 'brown') {
@@ -662,13 +663,13 @@ deckBtn.addEventListener('click', () => {
       } else if (lastElement.color == 'blue') {
         lastCard.style.boxShadow = `0px 3px 29px 9px blue`
       }
-      lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       for (let i = 3; i < 6; i++) {
         allDots[i].textContent = countFunc(arrIogSothoth[1])[i - 3]
       }
     } else if (arrIogSothoth[1].length == 0 && arrIogSothoth[0].length != 0) {
       lastCard.classList.remove('hide')
       let lastElement = arrIogSothoth[0].pop()
+      lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       if (lastElement.color == 'green') {
         lastCard.style.boxShadow = `0px 3px 29px 9px darkgreen`
       } else if (lastElement.color == 'brown') {
@@ -676,7 +677,6 @@ deckBtn.addEventListener('click', () => {
       } else if (lastElement.color == 'blue') {
         lastCard.style.boxShadow = `0px 3px 29px 9px blue`
       }
-      lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       for (let i = 6; i < 9; i++) {
         allDots[i].textContent = countFunc(arrIogSothoth[0])[i - 6]
       }
