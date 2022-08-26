@@ -101,6 +101,7 @@ main {
 }
 .shuffle {
   cursor: pointer;
+  color: azure;
   border: 1px blueviolet;
   background: transparent;
   border-radius: 5px;
