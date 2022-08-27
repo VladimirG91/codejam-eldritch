@@ -6,7 +6,7 @@ import allGreenCards from './data/mythicCards/green/index.js'
 import playList from './playList.js'
 
 console.log(
-  '  Здравствуйте! После выбора карты древнего и уровня сложности, обязательно нажмите кнопку SHUFFLE=)\n Наслаждайтесь музыкой!=)'
+  ' Здравствуйте! После выбора карты древнего и уровня сложности, обязательно нажмите кнопку SHUFFLE=)\n Наслаждайтесь музыкой!=)'
 )
 
 const ancients = document.querySelector('.ancients')
