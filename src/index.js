@@ -537,18 +537,12 @@ const lastCard = document.querySelector('.last-card')
 
 function greenShadow() {
   lastCard.classList.add('shadow_green')
-  lastCard.classList.remove('shadow_blue')
-  lastCard.classList.remove('shadow_brown')
 }
 function brownShadow() {
   lastCard.classList.add('shadow_brown')
-  lastCard.classList.remove('shadow_blue')
-  lastCard.classList.remove('shadow_green')
 }
 function blueShadow() {
   lastCard.classList.add('shadow_blue')
-  lastCard.classList.remove('shadow_green')
-  lastCard.classList.remove('shadow_brown')
 }
 function DelShadow() {
   lastCard.classList.remove('shadow_green')
