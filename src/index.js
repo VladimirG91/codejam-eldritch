@@ -562,11 +562,11 @@ deckBtn.addEventListener('click', () => {
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       DelShadow()
       if (lastElement.color == 'green') {
-        setTimeout(greenShadow, 50)
+        setTimeout(greenShadow, 800)
       } else if (lastElement.color == 'brown') {
-        setTimeout(brownShadow, 50)
+        setTimeout(brownShadow, 800)
       } else if (lastElement.color == 'blue') {
-        setTimeout(blueShadow, 50)
+        setTimeout(blueShadow, 800)
       }
       for (let i = 0; i < 3; i++) {
         allDots[i].textContent = countFunc(arrAzathoth[2])[i]
@@ -577,11 +577,11 @@ deckBtn.addEventListener('click', () => {
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       DelShadow()
       if (lastElement.color == 'green') {
-        setTimeout(greenShadow, 50)
+        setTimeout(greenShadow, 800)
       } else if (lastElement.color == 'brown') {
-        setTimeout(brownShadow, 50)
+        setTimeout(brownShadow, 800)
       } else if (lastElement.color == 'blue') {
-        setTimeout(blueShadow, 50)
+        setTimeout(blueShadow, 800)
       }
       for (let i = 3; i < 6; i++) {
         allDots[i].textContent = countFunc(arrAzathoth[1])[i - 3]
@@ -592,11 +592,11 @@ deckBtn.addEventListener('click', () => {
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       DelShadow()
       if (lastElement.color == 'green') {
-        setTimeout(greenShadow, 50)
+        setTimeout(greenShadow, 800)
       } else if (lastElement.color == 'brown') {
-        setTimeout(brownShadow, 50)
+        setTimeout(brownShadow, 800)
       } else if (lastElement.color == 'blue') {
-        setTimeout(blueShadow, 50)
+        setTimeout(blueShadow, 800)
       }
       for (let i = 6; i < 9; i++) {
         allDots[i].textContent = countFunc(arrAzathoth[0])[i - 6]
@@ -613,11 +613,11 @@ deckBtn.addEventListener('click', () => {
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       DelShadow()
       if (lastElement.color == 'green') {
-        setTimeout(greenShadow, 50)
+        setTimeout(greenShadow, 800)
       } else if (lastElement.color == 'brown') {
-        setTimeout(brownShadow, 50)
+        setTimeout(brownShadow, 800)
       } else if (lastElement.color == 'blue') {
-        setTimeout(blueShadow, 50)
+        setTimeout(blueShadow, 800)
       }
       for (let i = 0; i < 3; i++) {
         allDots[i].textContent = countFunc(arrСthulhu[2])[i]
@@ -628,11 +628,11 @@ deckBtn.addEventListener('click', () => {
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       DelShadow()
       if (lastElement.color == 'green') {
-        setTimeout(greenShadow, 50)
+        setTimeout(greenShadow, 800)
       } else if (lastElement.color == 'brown') {
-        setTimeout(brownShadow, 50)
+        setTimeout(brownShadow, 800)
       } else if (lastElement.color == 'blue') {
-        setTimeout(blueShadow, 50)
+        setTimeout(blueShadow, 800)
       }
       for (let i = 3; i < 6; i++) {
         allDots[i].textContent = countFunc(arrСthulhu[1])[i - 3]
@@ -643,11 +643,11 @@ deckBtn.addEventListener('click', () => {
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       DelShadow()
       if (lastElement.color == 'green') {
-        setTimeout(greenShadow, 50)
+        setTimeout(greenShadow, 800)
       } else if (lastElement.color == 'brown') {
-        setTimeout(brownShadow, 50)
+        setTimeout(brownShadow, 800)
       } else if (lastElement.color == 'blue') {
-        setTimeout(blueShadow, 50)
+        setTimeout(blueShadow, 800)
       }
       for (let i = 6; i < 9; i++) {
         allDots[i].textContent = countFunc(arrСthulhu[0])[i - 6]
@@ -664,11 +664,11 @@ deckBtn.addEventListener('click', () => {
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       DelShadow()
       if (lastElement.color == 'green') {
-        setTimeout(greenShadow, 50)
+        setTimeout(greenShadow, 800)
       } else if (lastElement.color == 'brown') {
-        setTimeout(brownShadow, 50)
+        setTimeout(brownShadow, 800)
       } else if (lastElement.color == 'blue') {
-        setTimeout(blueShadow, 50)
+        setTimeout(blueShadow, 800)
       }
       for (let i = 0; i < 3; i++) {
         allDots[i].textContent = countFunc(arrIogSothoth[2])[i]
@@ -679,11 +679,11 @@ deckBtn.addEventListener('click', () => {
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       DelShadow()
       if (lastElement.color == 'green') {
-        setTimeout(greenShadow, 50)
+        setTimeout(greenShadow, 800)
       } else if (lastElement.color == 'brown') {
-        setTimeout(brownShadow, 50)
+        setTimeout(brownShadow, 800)
       } else if (lastElement.color == 'blue') {
-        setTimeout(blueShadow, 50)
+        setTimeout(blueShadow, 800)
       }
       for (let i = 3; i < 6; i++) {
         allDots[i].textContent = countFunc(arrIogSothoth[1])[i - 3]
@@ -694,11 +694,11 @@ deckBtn.addEventListener('click', () => {
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       DelShadow()
       if (lastElement.color == 'green') {
-        setTimeout(greenShadow, 50)
+        setTimeout(greenShadow, 800)
       } else if (lastElement.color == 'brown') {
-        setTimeout(brownShadow, 50)
+        setTimeout(brownShadow, 800)
       } else if (lastElement.color == 'blue') {
-        setTimeout(blueShadow, 50)
+        setTimeout(blueShadow, 800)
       }
       for (let i = 6; i < 9; i++) {
         allDots[i].textContent = countFunc(arrIogSothoth[0])[i - 6]
