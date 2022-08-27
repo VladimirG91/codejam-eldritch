@@ -550,6 +550,11 @@ function blueShadow() {
   lastCard.classList.remove('shadow_green')
   lastCard.classList.remove('shadow_brown')
 }
+function DelShadow() {
+  lastCard.classList.remove('shadow_green')
+  lastCard.classList.remove('shadow_brown')
+  lastCard.classList.remove('shadow_blue')
+}
 deckBtn.addEventListener('click', () => {
   // азатот или шабниггурат
   if (
@@ -561,12 +566,13 @@ deckBtn.addEventListener('click', () => {
       lastCard.classList.remove('hide')
       lastElement = arrAzathoth[2].pop()
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
+      DelShadow()
       if (lastElement.color == 'green') {
-        setTimeout(greenShadow, 800)
+        setTimeout(greenShadow, 500)
       } else if (lastElement.color == 'brown') {
-        setTimeout(brownShadow, 800)
+        setTimeout(brownShadow, 500)
       } else if (lastElement.color == 'blue') {
-        setTimeout(blueShadow, 800)
+        setTimeout(blueShadow, 500)
       }
       for (let i = 0; i < 3; i++) {
         allDots[i].textContent = countFunc(arrAzathoth[2])[i]
@@ -575,12 +581,13 @@ deckBtn.addEventListener('click', () => {
       lastCard.classList.remove('hide')
       lastElement = arrAzathoth[1].pop()
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
+      DelShadow()
       if (lastElement.color == 'green') {
-        setTimeout(greenShadow, 800)
+        setTimeout(greenShadow, 500)
       } else if (lastElement.color == 'brown') {
-        setTimeout(brownShadow, 800)
+        setTimeout(brownShadow, 500)
       } else if (lastElement.color == 'blue') {
-        setTimeout(blueShadow, 800)
+        setTimeout(blueShadow, 500)
       }
       for (let i = 3; i < 6; i++) {
         allDots[i].textContent = countFunc(arrAzathoth[1])[i - 3]
@@ -589,12 +596,13 @@ deckBtn.addEventListener('click', () => {
       lastCard.classList.remove('hide')
       lastElement = arrAzathoth[0].pop()
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
+      DelShadow()
       if (lastElement.color == 'green') {
-        setTimeout(greenShadow, 800)
+        setTimeout(greenShadow, 500)
       } else if (lastElement.color == 'brown') {
-        setTimeout(brownShadow, 800)
+        setTimeout(brownShadow, 500)
       } else if (lastElement.color == 'blue') {
-        setTimeout(blueShadow, 800)
+        setTimeout(blueShadow, 500)
       }
       for (let i = 6; i < 9; i++) {
         allDots[i].textContent = countFunc(arrAzathoth[0])[i - 6]
@@ -609,12 +617,13 @@ deckBtn.addEventListener('click', () => {
       lastCard.classList.remove('hide')
       let lastElement = arrСthulhu[2].pop()
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
+      DelShadow()
       if (lastElement.color == 'green') {
-        setTimeout(greenShadow, 800)
+        setTimeout(greenShadow, 500)
       } else if (lastElement.color == 'brown') {
-        setTimeout(brownShadow, 800)
+        setTimeout(brownShadow, 500)
       } else if (lastElement.color == 'blue') {
-        setTimeout(blueShadow, 800)
+        setTimeout(blueShadow, 500)
       }
       for (let i = 0; i < 3; i++) {
         allDots[i].textContent = countFunc(arrСthulhu[2])[i]
@@ -623,12 +632,13 @@ deckBtn.addEventListener('click', () => {
       lastCard.classList.remove('hide')
       let lastElement = arrСthulhu[1].pop()
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
+      DelShadow()
       if (lastElement.color == 'green') {
-        setTimeout(greenShadow, 800)
+        setTimeout(greenShadow, 500)
       } else if (lastElement.color == 'brown') {
-        setTimeout(brownShadow, 800)
+        setTimeout(brownShadow, 500)
       } else if (lastElement.color == 'blue') {
-        setTimeout(blueShadow, 800)
+        setTimeout(blueShadow, 500)
       }
       for (let i = 3; i < 6; i++) {
         allDots[i].textContent = countFunc(arrСthulhu[1])[i - 3]
@@ -637,12 +647,13 @@ deckBtn.addEventListener('click', () => {
       lastCard.classList.remove('hide')
       let lastElement = arrСthulhu[0].pop()
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
+      DelShadow()
       if (lastElement.color == 'green') {
-        setTimeout(greenShadow, 800)
+        setTimeout(greenShadow, 500)
       } else if (lastElement.color == 'brown') {
-        setTimeout(brownShadow, 800)
+        setTimeout(brownShadow, 500)
       } else if (lastElement.color == 'blue') {
-        setTimeout(blueShadow, 800)
+        setTimeout(blueShadow, 500)
       }
       for (let i = 6; i < 9; i++) {
         allDots[i].textContent = countFunc(arrСthulhu[0])[i - 6]
@@ -657,12 +668,13 @@ deckBtn.addEventListener('click', () => {
       lastCard.classList.remove('hide')
       let lastElement = arrIogSothoth[2].pop()
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
+      DelShadow()
       if (lastElement.color == 'green') {
-        setTimeout(greenShadow, 800)
+        setTimeout(greenShadow, 500)
       } else if (lastElement.color == 'brown') {
-        setTimeout(brownShadow, 800)
+        setTimeout(brownShadow, 500)
       } else if (lastElement.color == 'blue') {
-        setTimeout(blueShadow, 800)
+        setTimeout(blueShadow, 500)
       }
       for (let i = 0; i < 3; i++) {
         allDots[i].textContent = countFunc(arrIogSothoth[2])[i]
@@ -671,12 +683,13 @@ deckBtn.addEventListener('click', () => {
       lastCard.classList.remove('hide')
       let lastElement = arrIogSothoth[1].pop()
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
+      DelShadow()
       if (lastElement.color == 'green') {
-        setTimeout(greenShadow, 800)
+        setTimeout(greenShadow, 500)
       } else if (lastElement.color == 'brown') {
-        setTimeout(brownShadow, 800)
+        setTimeout(brownShadow, 500)
       } else if (lastElement.color == 'blue') {
-        setTimeout(blueShadow, 800)
+        setTimeout(blueShadow, 500)
       }
       for (let i = 3; i < 6; i++) {
         allDots[i].textContent = countFunc(arrIogSothoth[1])[i - 3]
@@ -685,12 +698,13 @@ deckBtn.addEventListener('click', () => {
       lastCard.classList.remove('hide')
       let lastElement = arrIogSothoth[0].pop()
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
+      DelShadow()
       if (lastElement.color == 'green') {
-        setTimeout(greenShadow, 800)
+        setTimeout(greenShadow, 500)
       } else if (lastElement.color == 'brown') {
-        setTimeout(brownShadow, 800)
+        setTimeout(brownShadow, 500)
       } else if (lastElement.color == 'blue') {
-        setTimeout(blueShadow, 800)
+        setTimeout(blueShadow, 500)
       }
       for (let i = 6; i < 9; i++) {
         allDots[i].textContent = countFunc(arrIogSothoth[0])[i - 6]
