@@ -354,15 +354,6 @@ function DelShadow() {
   lastCard.classList.remove('shadow_brown')
   lastCard.classList.remove('shadow_blue')
 }
-// function ifColor() {
-//   if (lastElement.color == 'green') {
-//     setTimeout(greenShadow, 100)
-//   } else if (lastElement.color == 'brown') {
-//     setTimeout(brownShadow, 100)
-//   } else if (lastElement.color == 'blue') {
-//     setTimeout(blueShadow, 100)
-//   }
-// }
 
 deckBtn.addEventListener('click', () => {
   // азатот или шабниггурат
@@ -379,7 +370,7 @@ deckBtn.addEventListener('click', () => {
         setTimeout(blueShadow, 100)
       }
     }
-    let lastElement = 0
+    let lastElement
     if (arrAzathoth[2].length != 0) {
       lastCard.classList.remove('hide')
       lastElement = arrAzathoth[2].pop()
@@ -422,9 +413,10 @@ deckBtn.addEventListener('click', () => {
         setTimeout(blueShadow, 100)
       }
     }
+    let lastElement
     if (arrСthulhu[2].length != 0) {
       lastCard.classList.remove('hide')
-      let lastElement = arrСthulhu[2].pop()
+      lastElement = arrСthulhu[2].pop()
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       DelShadow()
       ifColor()
@@ -433,7 +425,7 @@ deckBtn.addEventListener('click', () => {
       }
     } else if (arrСthulhu[2].length == 0 && arrСthulhu[1].length != 0) {
       lastCard.classList.remove('hide')
-      let lastElement = arrСthulhu[1].pop()
+      lastElement = arrСthulhu[1].pop()
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       DelShadow()
       ifColor()
@@ -442,7 +434,7 @@ deckBtn.addEventListener('click', () => {
       }
     } else if (arrСthulhu[1].length == 0 && arrСthulhu[0].length != 0) {
       lastCard.classList.remove('hide')
-      let lastElement = arrСthulhu[0].pop()
+      lastElement = arrСthulhu[0].pop()
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       DelShadow()
       ifColor()
@@ -464,9 +456,10 @@ deckBtn.addEventListener('click', () => {
         setTimeout(blueShadow, 100)
       }
     }
+    let lastElement
     if (arrIogSothoth[2].length != 0) {
       lastCard.classList.remove('hide')
-      let lastElement = arrIogSothoth[2].pop()
+      lastElement = arrIogSothoth[2].pop()
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       DelShadow()
       ifColor()
@@ -475,7 +468,7 @@ deckBtn.addEventListener('click', () => {
       }
     } else if (arrIogSothoth[2].length == 0 && arrIogSothoth[1].length != 0) {
       lastCard.classList.remove('hide')
-      let lastElement = arrIogSothoth[1].pop()
+      lastElement = arrIogSothoth[1].pop()
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       DelShadow()
       ifColor()
@@ -484,7 +477,7 @@ deckBtn.addEventListener('click', () => {
       }
     } else if (arrIogSothoth[1].length == 0 && arrIogSothoth[0].length != 0) {
       lastCard.classList.remove('hide')
-      let lastElement = arrIogSothoth[0].pop()
+      lastElement = arrIogSothoth[0].pop()
       lastCard.style.backgroundImage = `url('${lastElement.cardFace}')`
       DelShadow()
       ifColor()
