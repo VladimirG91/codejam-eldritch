@@ -39,7 +39,7 @@ const cardsData = [
   },
   {
     id: 'brown7',
-    cardFace: './src/assets/MythicCards/brown/brown8.jpg',
+    cardFace: './src/assets/MythicCards/brown/brown7.jpg',
     difficulty: 'hard',
     color: 'brown',
   },
