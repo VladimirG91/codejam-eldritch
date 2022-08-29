@@ -96,7 +96,11 @@ shuffleBtn.addEventListener('click', () => {
   let easiestLvlBrownCards = [...allEasyBrownCards, ...brown]
   let shuffledEasiestLvlBrownCards = shuffleCards(easiestLvlBrownCards)
   //азатот и шуб-ниггурат
-  function azathothLvl() {
+  if (
+    (ancientImgList[0].classList.contains('active') ||
+      ancientImgList[3].classList.contains('active')) &&
+    difficulty[0].classList.contains('act')
+  ) {
     azathothFirstStage = []
     azathothSecondStage = []
     azathothThirdStage = []
@@ -117,15 +121,11 @@ shuffleBtn.addEventListener('click', () => {
       azathothThirdStage.push(shuffledEasiestLvlBrownCards.pop())
     }
   }
+  // ктулху
   if (
-    (ancientImgList[0].classList.contains('active') ||
-      ancientImgList[3].classList.contains('active')) &&
+    ancientImgList[1].classList.contains('active') &&
     difficulty[0].classList.contains('act')
   ) {
-    azathothLvl()
-  }
-  // ктулху
-  function cthulhuLvl() {
     cthulhuFirstStage = []
     cthulhuSecondStage = []
     cthulhuThirdStage = []
@@ -144,14 +144,11 @@ shuffleBtn.addEventListener('click', () => {
       cthulhuThirdStage.push(shuffledEasiestLvlBrownCards.pop())
     }
   }
+  // йогсотот
   if (
-    ancientImgList[1].classList.contains('active') &&
+    ancientImgList[2].classList.contains('active') &&
     difficulty[0].classList.contains('act')
   ) {
-    cthulhuLvl()
-  }
-  // йогсотот
-  function iogSothothLvl() {
     iogSothothFirstStage = []
     iogSothothSecondStage = []
     iogSothothThirdStage = []
@@ -172,12 +169,6 @@ shuffleBtn.addEventListener('click', () => {
       iogSothothThirdStage.push(shuffledEasiestLvlBrownCards.pop())
     }
   }
-  if (
-    ancientImgList[2].classList.contains('active') &&
-    difficulty[0].classList.contains('act')
-  ) {
-    iogSothothLvl()
-  }
 
   //========================= Если выбран EASY LVL========================
   let easyLvlGreenCards = [...allEasyGreenCards, ...allNormalGreenCards]
@@ -192,21 +183,72 @@ shuffleBtn.addEventListener('click', () => {
       ancientImgList[3].classList.contains('active')) &&
     difficulty[1].classList.contains('act')
   ) {
-    azathothLvl()
+    azathothFirstStage = []
+    azathothSecondStage = []
+    azathothThirdStage = []
+    for (let i = 0; i < 1; i++) {
+      azathothFirstStage.push(shuffledEasyLvlGreenCards.pop())
+      azathothFirstStage.push(shuffledEasyLvlBlueCards.pop())
+      azathothSecondStage.push(shuffledEasyLvlBlueCards.pop())
+    }
+    for (let i = 0; i < 2; i++) {
+      azathothFirstStage.push(shuffledEasyLvlBrownCards.pop())
+      azathothSecondStage.push(shuffledEasyLvlBrownCards.pop())
+      azathothThirdStage.push(shuffledEasyLvlGreenCards.pop())
+    }
+    for (let i = 0; i < 3; i++) {
+      azathothSecondStage.push(shuffledEasyLvlGreenCards.pop())
+    }
+    for (let i = 0; i < 4; i++) {
+      azathothThirdStage.push(shuffledEasyLvlBrownCards.pop())
+    }
   }
   // ктулху
   if (
     ancientImgList[1].classList.contains('active') &&
     difficulty[1].classList.contains('act')
   ) {
-    cthulhuLvl()
+    cthulhuFirstStage = []
+    cthulhuSecondStage = []
+    cthulhuThirdStage = []
+    for (let i = 0; i < 1; i++) {
+      cthulhuSecondStage.push(shuffledEasyLvlGreenCards.pop())
+    }
+    for (let i = 0; i < 2; i++) {
+      cthulhuFirstStage.push(shuffledEasyLvlBrownCards.pop())
+      cthulhuFirstStage.push(shuffledEasyLvlBlueCards.pop())
+    }
+    for (let i = 0; i < 3; i++) {
+      cthulhuSecondStage.push(shuffledEasyLvlBrownCards.pop())
+      cthulhuThirdStage.push(shuffledEasyLvlGreenCards.pop())
+    }
+    for (let i = 0; i < 4; i++) {
+      cthulhuThirdStage.push(shuffledEasyLvlBrownCards.pop())
+    }
   }
   // йогсотот
   if (
     ancientImgList[2].classList.contains('active') &&
     difficulty[1].classList.contains('act')
   ) {
-    iogSothothLvl()
+    iogSothothFirstStage = []
+    iogSothothSecondStage = []
+    iogSothothThirdStage = []
+    for (let i = 0; i < 1; i++) {
+      iogSothothFirstStage.push(shuffledEasyLvlBlueCards.pop())
+      iogSothothSecondStage.push(shuffledEasyLvlBlueCards.pop())
+    }
+    for (let i = 0; i < 2; i++) {
+      iogSothothFirstStage.push(shuffledEasyLvlBrownCards.pop())
+      iogSothothSecondStage.push(shuffledEasyLvlGreenCards.pop())
+    }
+    for (let i = 0; i < 3; i++) {
+      iogSothothSecondStage.push(shuffledEasyLvlBrownCards.pop())
+      iogSothothThirdStage.push(shuffledEasyLvlGreenCards.pop())
+    }
+    for (let i = 0; i < 4; i++) {
+      iogSothothThirdStage.push(shuffledEasyLvlBrownCards.pop())
+    }
   }
 
   //==================== Если выбран NORMAL LVL  ==================
@@ -219,21 +261,72 @@ shuffleBtn.addEventListener('click', () => {
       ancientImgList[3].classList.contains('active')) &&
     difficulty[2].classList.contains('act')
   ) {
-    azathothLvl()
+    azathothFirstStage = []
+    azathothSecondStage = []
+    azathothThirdStage = []
+    for (let i = 0; i < 1; i++) {
+      azathothFirstStage.push(shuffledAllGreenArr.pop())
+      azathothFirstStage.push(shuffledAllBlueArr.pop())
+      azathothSecondStage.push(shuffledAllBlueArr.pop())
+    }
+    for (let i = 0; i < 2; i++) {
+      azathothFirstStage.push(shuffledAllBrownArr.pop())
+      azathothSecondStage.push(shuffledAllBrownArr.pop())
+      azathothThirdStage.push(shuffledAllGreenArr.pop())
+    }
+    for (let i = 0; i < 3; i++) {
+      azathothSecondStage.push(shuffledAllGreenArr.pop())
+    }
+    for (let i = 0; i < 4; i++) {
+      azathothThirdStage.push(shuffledAllBrownArr.pop())
+    }
   }
   // ктулху
   if (
     ancientImgList[1].classList.contains('active') &&
     difficulty[2].classList.contains('act')
   ) {
-    cthulhuLvl()
+    cthulhuFirstStage = []
+    cthulhuSecondStage = []
+    cthulhuThirdStage = []
+    for (let i = 0; i < 1; i++) {
+      cthulhuSecondStage.push(shuffledAllGreenArr.pop())
+    }
+    for (let i = 0; i < 2; i++) {
+      cthulhuFirstStage.push(shuffledAllBrownArr.pop())
+      cthulhuFirstStage.push(shuffledAllBlueArr.pop())
+    }
+    for (let i = 0; i < 3; i++) {
+      cthulhuSecondStage.push(shuffledAllBrownArr.pop())
+      cthulhuThirdStage.push(shuffledAllGreenArr.pop())
+    }
+    for (let i = 0; i < 4; i++) {
+      cthulhuThirdStage.push(shuffledAllBrownArr.pop())
+    }
   }
   // йогсотот
   if (
     ancientImgList[2].classList.contains('active') &&
     difficulty[2].classList.contains('act')
   ) {
-    iogSothothLvl()
+    iogSothothFirstStage = []
+    iogSothothSecondStage = []
+    iogSothothThirdStage = []
+    for (let i = 0; i < 1; i++) {
+      iogSothothFirstStage.push(shuffledAllBlueArr.pop())
+      iogSothothSecondStage.push(shuffledAllBlueArr.pop())
+    }
+    for (let i = 0; i < 2; i++) {
+      iogSothothFirstStage.push(shuffledAllBrownArr.pop())
+      iogSothothSecondStage.push(shuffledAllGreenArr.pop())
+    }
+    for (let i = 0; i < 3; i++) {
+      iogSothothSecondStage.push(shuffledAllBrownArr.pop())
+      iogSothothThirdStage.push(shuffledAllGreenArr.pop())
+    }
+    for (let i = 0; i < 4; i++) {
+      iogSothothThirdStage.push(shuffledAllBrownArr.pop())
+    }
   }
   //========================= Если выбран HARD LVL========================
   let hardLvlGreenCards = [...allHardGreenCards, ...allNormalGreenCards]
@@ -248,21 +341,72 @@ shuffleBtn.addEventListener('click', () => {
       ancientImgList[3].classList.contains('active')) &&
     difficulty[3].classList.contains('act')
   ) {
-    azathothLvl()
+    azathothFirstStage = []
+    azathothSecondStage = []
+    azathothThirdStage = []
+    for (let i = 0; i < 1; i++) {
+      azathothFirstStage.push(shuffledHardLvlGreenCards.pop())
+      azathothFirstStage.push(shuffledHardLvlBlueCards.pop())
+      azathothSecondStage.push(shuffledHardLvlBlueCards.pop())
+    }
+    for (let i = 0; i < 2; i++) {
+      azathothFirstStage.push(shuffledHardLvlBrownCards.pop())
+      azathothSecondStage.push(shuffledHardLvlBrownCards.pop())
+      azathothThirdStage.push(shuffledHardLvlGreenCards.pop())
+    }
+    for (let i = 0; i < 3; i++) {
+      azathothSecondStage.push(shuffledHardLvlGreenCards.pop())
+    }
+    for (let i = 0; i < 4; i++) {
+      azathothThirdStage.push(shuffledHardLvlBrownCards.pop())
+    }
   }
   // ктулху
   if (
     ancientImgList[1].classList.contains('active') &&
     difficulty[3].classList.contains('act')
   ) {
-    cthulhuLvl()
+    cthulhuFirstStage = []
+    cthulhuSecondStage = []
+    cthulhuThirdStage = []
+    for (let i = 0; i < 1; i++) {
+      cthulhuSecondStage.push(shuffledHardLvlGreenCards.pop())
+    }
+    for (let i = 0; i < 2; i++) {
+      cthulhuFirstStage.push(shuffledHardLvlBrownCards.pop())
+      cthulhuFirstStage.push(shuffledHardLvlBlueCards.pop())
+    }
+    for (let i = 0; i < 3; i++) {
+      cthulhuSecondStage.push(shuffledHardLvlBrownCards.pop())
+      cthulhuThirdStage.push(shuffledHardLvlGreenCards.pop())
+    }
+    for (let i = 0; i < 4; i++) {
+      cthulhuThirdStage.push(shuffledHardLvlBrownCards.pop())
+    }
   }
   // йогсотот
   if (
     ancientImgList[2].classList.contains('active') &&
     difficulty[3].classList.contains('act')
   ) {
-    iogSothothLvl()
+    iogSothothFirstStage = []
+    iogSothothSecondStage = []
+    iogSothothThirdStage = []
+    for (let i = 0; i < 1; i++) {
+      iogSothothFirstStage.push(shuffledHardLvlBlueCards.pop())
+      iogSothothSecondStage.push(shuffledHardLvlBlueCards.pop())
+    }
+    for (let i = 0; i < 2; i++) {
+      iogSothothFirstStage.push(shuffledHardLvlBrownCards.pop())
+      iogSothothSecondStage.push(shuffledHardLvlGreenCards.pop())
+    }
+    for (let i = 0; i < 3; i++) {
+      iogSothothSecondStage.push(shuffledHardLvlBrownCards.pop())
+      iogSothothThirdStage.push(shuffledHardLvlGreenCards.pop())
+    }
+    for (let i = 0; i < 4; i++) {
+      iogSothothThirdStage.push(shuffledHardLvlBrownCards.pop())
+    }
   }
   //========================= Если выбран HARDEST LVL========================
   let greenHardest = shuffleCards(allNormalGreenCards)
@@ -283,21 +427,72 @@ shuffleBtn.addEventListener('click', () => {
       ancientImgList[3].classList.contains('active')) &&
     difficulty[4].classList.contains('act')
   ) {
-    azathothLvl()
+    azathothFirstStage = []
+    azathothSecondStage = []
+    azathothThirdStage = []
+    for (let i = 0; i < 1; i++) {
+      azathothFirstStage.push(shuffledHardestLvlGreenCards.pop())
+      azathothFirstStage.push(shuffledHardestLvlBlueCards.pop())
+      azathothSecondStage.push(shuffledHardestLvlBlueCards.pop())
+    }
+    for (let i = 0; i < 2; i++) {
+      azathothFirstStage.push(shuffledHardestLvlBrownCards.pop())
+      azathothSecondStage.push(shuffledHardestLvlBrownCards.pop())
+      azathothThirdStage.push(shuffledHardestLvlGreenCards.pop())
+    }
+    for (let i = 0; i < 3; i++) {
+      azathothSecondStage.push(shuffledHardestLvlGreenCards.pop())
+    }
+    for (let i = 0; i < 4; i++) {
+      azathothThirdStage.push(shuffledHardestLvlBrownCards.pop())
+    }
   }
   // ктулху
   if (
     ancientImgList[1].classList.contains('active') &&
     difficulty[4].classList.contains('act')
   ) {
-    cthulhuLvl()
+    cthulhuFirstStage = []
+    cthulhuSecondStage = []
+    cthulhuThirdStage = []
+    for (let i = 0; i < 1; i++) {
+      cthulhuSecondStage.push(shuffledHardestLvlGreenCards.pop())
+    }
+    for (let i = 0; i < 2; i++) {
+      cthulhuFirstStage.push(shuffledHardestLvlBrownCards.pop())
+      cthulhuFirstStage.push(shuffledHardestLvlBlueCards.pop())
+    }
+    for (let i = 0; i < 3; i++) {
+      cthulhuSecondStage.push(shuffledHardestLvlBrownCards.pop())
+      cthulhuThirdStage.push(shuffledHardestLvlGreenCards.pop())
+    }
+    for (let i = 0; i < 4; i++) {
+      cthulhuThirdStage.push(shuffledHardestLvlBrownCards.pop())
+    }
   }
   // йогсотот
   if (
     ancientImgList[2].classList.contains('active') &&
     difficulty[4].classList.contains('act')
   ) {
-    iogSothothLvl()
+    iogSothothFirstStage = []
+    iogSothothSecondStage = []
+    iogSothothThirdStage = []
+    for (let i = 0; i < 1; i++) {
+      iogSothothFirstStage.push(shuffledHardestLvlBlueCards.pop())
+      iogSothothSecondStage.push(shuffledHardestLvlBlueCards.pop())
+    }
+    for (let i = 0; i < 2; i++) {
+      iogSothothFirstStage.push(shuffledHardestLvlBrownCards.pop())
+      iogSothothSecondStage.push(shuffledHardestLvlGreenCards.pop())
+    }
+    for (let i = 0; i < 3; i++) {
+      iogSothothSecondStage.push(shuffledHardestLvlBrownCards.pop())
+      iogSothothThirdStage.push(shuffledHardestLvlGreenCards.pop())
+    }
+    for (let i = 0; i < 4; i++) {
+      iogSothothThirdStage.push(shuffledHardestLvlBrownCards.pop())
+    }
   }
   arrAzathoth = [
     shuffleCards(azathothThirdStage),
